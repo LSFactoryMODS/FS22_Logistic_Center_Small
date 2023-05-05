@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<markerIcons>
+    <filename>MarkerIcon_FactoryMODS/Logistik_icons.i3d</filename>
+    <variations>
+        <variation node="0|0" id="PC" />
+        <variation node="0|1" id="UNLOAD1" />
+        <variation node="0|2" id="UNLOAD2" />
+        <variation node="0|3" id="UNLOAD3" />
+
+    </variations>
+</markerIcons>
