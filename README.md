@@ -64,7 +64,7 @@ Ohne diesen Mod funktioniert das Lager erst Garnicht.
 
 Support für diesen mod gebe ich nur auf meinem Discord sollter mal nicht funktionieren
 
-findet hier hier auf meinem Profil noch mal einen link der dort hinführt
+
 https://discord.gg/9ykq9dHFEn
 
 
