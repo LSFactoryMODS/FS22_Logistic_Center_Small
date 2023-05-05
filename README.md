@@ -1,6 +1,13 @@
 # FS22_Logistic_Center_Small
 # Version 1.6.0.0
 
+
+Direkter Download
+https://github.com/LSFactoryMODS/FS22_Logistic_Center_Small/releases/tag/FS22_Logistic_Center_Small
+
+
+
+
 Bevor nun das Logistik Zentrum 2.0 kommt gibt es nun erstmal eine Überarbeitete Version des kleinen Logistik Zentrums.
 
 
