@@ -2,8 +2,8 @@
 # Version 1.6.0.1
 
 
-Direkter Download
-https://github.com/LSFactoryMODS/FS22_Logistic_Center_Small/releases/tag/FS22_Logistic_Center_Small
+Direkter Download:https://github.com/LSFactoryMODS/FS22_Logistic_Center_Small/releases/tag/FS22_Logistic_Center_Small
+
 
 
 
