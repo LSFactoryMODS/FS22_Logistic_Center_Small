@@ -1,0 +1,1767 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="FS22_A_ProductionRevamp.RevampSilo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_LogisticWarehouse</name>
+        <functions>
+            <function>$l10n_function_LogisticWarehouse</function>
+        </functions>
+        <image>store_logistikzentrum.dds</image>
+        <price>400000</price>
+        <lifetime>1000</lifetime>
+        <dailyUpkeep>50</dailyUpkeep>
+        <rotation>0</rotation>
+        <brand>FACTORYMODS</brand>
+        <species>placeable</species>
+        <category>placeableMisc</category>
+        <brush>
+            <type>placeable</type>
+            <category>factorymods</category>
+            <tab>LogisticCenterKlein</tab>
+        </brush>
+    </storeData>
+    
+    <base>
+        <filename>LogistikZentrum.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+    </base>
+    
+    <aPalletSilo triggerNode="palletMenuTrigger">
+      <palletSpawner node="palletSpawner">
+        <spawnPlaces>
+            <spawnPlace startNode="palletSpawnerRight1start" endNode="palletSpawnerRight1end" fillTypes="FLOUR CLOTHES OLIVE_OIL SUNFLOWER_OIL CANOLA_OIL SUGAR CEREAL FURNITURE FABRIC"/>
+            <spawnPlace startNode="palletSpawnerRight2start" endNode="palletSpawnerRight2end" fillTypes="BOARDS SILAGE_ADDITIVE SEEDS MINERAL_FEED WOOL EMPTYPALLET"/>  
+            <spawnPlace startNode="palletSpawnerRight3start" endNode="palletSpawnerRight3end" fillTypes="BUTTER CHOCOLATE RAISINS STRAWBERRY LETTUCE TOMATO BREAD CAKE EGG HONEY GRAPEJUICE CHEESE"/>  
+            <spawnPlace startNode="palletSpawnerRight4start" endNode="palletSpawnerRight4end" fillTypes="BUTTER CHOCOLATE RAISINS STRAWBERRY LETTUCE TOMATO BREAD CAKE EGG HONEY GRAPEJUICE CHEESE"/>  
+            <spawnPlace startNode="palletSpawnerRight5start" endNode="palletSpawnerRight5end" fillTypes="BUTTER CHOCOLATE RAISINS STRAWBERRY LETTUCE TOMATO BREAD CAKE EGG HONEY GRAPEJUICE CHEESE"/>  
+            <spawnPlace startNode="palletSpawnerRight6start" endNode="palletSpawnerRight6end" fillTypes="BUTTER CHOCOLATE RAISINS STRAWBERRY LETTUCE TOMATO BREAD CAKE EGG HONEY GRAPEJUICE CHEESE"/>  
+            <spawnPlace startNode="palletSpawnerRight7start" endNode="palletSpawnerRight7end" fillTypes="BUTTER CHOCOLATE RAISINS STRAWBERRY LETTUCE TOMATO BREAD CAKE EGG HONEY GRAPEJUICE CHEESE"/>  
+        </spawnPlaces>
+      </palletSpawner>   
+    </aPalletSilo>
+    <hotspots>
+        <hotspot type="UNLOADING" linkNode="triggerMarkerPc" teleportNode="teleportNode"/>
+    </hotspots>  
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+    </clearAreas>    
+    <leveling requireLeveling="true" maxSmoothDistance="10" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="gravel"/>
+        </levelAreas>
+    </leveling>   
+    <indoorAreas>
+            <indoorArea startNode="indoorArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height"/>
+            <indoorArea startNode="indoorArea2Start" widthNode="indoorArea2Width" heightNode="indoorArea2Height"/>
+            <indoorArea startNode="indoorArea3Start" widthNode="indoorArea3Width" heightNode="indoorArea3Height"/>
+    </indoorAreas>   
+    <ai>
+        <updateAreas></updateAreas>
+    </ai>  
+    <infoTrigger triggerNode="infoTrigger"/>
+
+    <silo>
+        <loadingStation fillTypeCategories="PRODUCT ADDITIONAL_STORAGE_GOODS"  storageRadius="0" supportsExtension="false">
+        </loadingStation>       
+        <unloadingStation supportsExtension="false" storageRadius="0">
+               <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="OLIVE_OIL"/>
+               <unloadTrigger exactFillRootNode="exactFillRootNode1" fillTypes="SUNFLOWER_OIL"/> 
+               <unloadTrigger exactFillRootNode="exactFillRootNode2" fillTypes="CANOLA_OIL"/>
+               <unloadTrigger exactFillRootNode="exactFillRootNode4" fillTypes="EMPTYPALLET"/>                     
+               <unloadTrigger exactFillRootNode="exactFillRootNode5" fillTypes="FLOUR"/>                   
+               <unloadTrigger exactFillRootNode="exactFillRootNode6" fillTypes="SUGAR"/> 
+               <unloadTrigger exactFillRootNode="exactFillRootNode7" fillTypes="CEREAL"/>                
+               <unloadTrigger exactFillRootNode="exactFillRootNode8" fillTypes="FURNITURE"/> 
+               <unloadTrigger exactFillRootNode="exactFillRootNode9" fillTypes="CLOTHES"/> 
+               <unloadTrigger exactFillRootNode="exactFillRootNode10" fillTypes="FABRIC"/>  
+               <unloadTrigger exactFillRootNode="exactFillRootNode11" fillTypes="BUTTER"/> 
+               <unloadTrigger exactFillRootNode="exactFillRootNode13" fillTypes="CHOCOLATE"/> 
+               <unloadTrigger exactFillRootNode="exactFillRootNode12" fillTypes="RAISINS"/>  
+               <unloadTrigger exactFillRootNode="exactFillRootNode14" fillTypes="STRAWBERRY"/> 
+               <unloadTrigger exactFillRootNode="exactFillRootNode15" fillTypes="LETTUCE"/> 
+               <unloadTrigger exactFillRootNode="exactFillRootNode16" fillTypes="TOMATO"/>  
+               <unloadTrigger exactFillRootNode="exactFillRootNode17" fillTypes="BREAD"/> 
+               <unloadTrigger exactFillRootNode="exactFillRootNode18" fillTypes="CAKE"/>  
+               <unloadTrigger exactFillRootNode="exactFillRootNode19" fillTypes="EGG"/>               
+               <unloadTrigger exactFillRootNode="exactFillRootNode20" fillTypes="HONEY"/> 
+               <unloadTrigger exactFillRootNode="exactFillRootNode21" fillTypes="GRAPEJUICE"/>  
+               <unloadTrigger exactFillRootNode="exactFillRootNode22" fillTypes="CHEESE"/> 
+               <unloadTrigger exactFillRootNode="exactFillRootNode23" fillTypes="BOARDS"/>  
+               <unloadTrigger exactFillRootNode="exactFillRootNode24" fillTypes="WOOL"/>                                                                                                                                                                            
+               <unloadTrigger exactFillRootNode="exactFillRootNode25" fillTypes="MINERAL_FEED"/> 
+ 
+               <unloadTrigger exactFillRootNode="exactFillRootNode27" fillTypes="SILAGE_ADDITIVE"/>                                                                                                                                                                            
+        </unloadingStation>
+                
+        <storages>
+			<storage   node="storage"       fillTypes="OLIVE_OIL"  isExtension="false" capacity="40000">
+				<fillPlane fillType="OLIVE_OIL" node="viewOLIVEOIL"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="SUNFLOWER_OIL"  isExtension="false" capacity="40000">
+				<fillPlane fillType="SUNFLOWER_OIL" node="viewSUNFLOWER_OIL"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="CANOLA_OIL"  isExtension="false" capacity="40000">
+				<fillPlane fillType="CANOLA_OIL" node="viewCANOLA_OIL"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="FLOUR"  isExtension="false" capacity="40000">
+				<fillPlane fillType="FLOUR" node="viewFLOUR"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="SUGAR"  isExtension="false" capacity="40000">
+				<fillPlane fillType="SUGAR" node="viewSUGAR"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="CEREAL"  isExtension="false" capacity="40000">
+				<fillPlane fillType="CEREAL" node="viewCEREAL"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="FURNITURE"  isExtension="false" capacity="40000">
+				<fillPlane fillType="FURNITURE" node="viewFURNITURE"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="CLOTHES"  isExtension="false" capacity="40000">
+				<fillPlane fillType="CLOTHES" node="viewCLOTHES"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="FABRIC"  isExtension="false" capacity="40000">
+				<fillPlane fillType="FABRIC" node="viewFABRIC"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="BUTTER"  isExtension="false" capacity="40000">
+				<fillPlane fillType="BUTTER" node="viewBUTTER"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="CHOCOLATE"  isExtension="false" capacity="40000">
+				<fillPlane fillType="CHOCOLATE" node="viewCHOCOLATE"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="RAISINS"  isExtension="false" capacity="40000">
+				<fillPlane fillType="RAISINS" node="viewRAISINS"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="STRAWBERRY"  isExtension="false" capacity="40000">
+				<fillPlane fillType="STRAWBERRY" node="viewSTRAWBERRY"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="LETTUCE"  isExtension="false" capacity="40000">
+				<fillPlane fillType="LETTUCE" node="viewLETTUCE"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="TOMATO"  isExtension="false" capacity="40000">
+				<fillPlane fillType="TOMATO" node="viewTOMATO"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="BREAD"  isExtension="false" capacity="40000">
+				<fillPlane fillType="BREAD" node="viewBREAD"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="EGG"  isExtension="false" capacity="40000">
+				<fillPlane fillType="EGG" node="viewEGG"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="CAKE"  isExtension="false" capacity="40000">
+				<fillPlane fillType="CAKE" node="viewCAKE"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="HONEY"  isExtension="false" capacity="40000">
+				<fillPlane fillType="HONEY" node="viewHONEY"    minY="2.1"       maxY="2.28" />
+			</storage>			
+			<storage   node="storage"       fillTypes="GRAPEJUICE"  isExtension="false" capacity="40000">
+				<fillPlane fillType="GRAPEJUICE" node="viewGRAPEJUICE"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="CHEESE"  isExtension="false" capacity="40000">
+				<fillPlane fillType="CHEESE" node="viewCHEESE"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="BOARDS"  isExtension="false" capacity="40000">
+				<fillPlane fillType="BOARDS" node="viewBOARDS"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="WOOL"  isExtension="false" capacity="40000">
+				<fillPlane fillType="WOOL" node="viewWOOL"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="EMPTYPALLET"  isExtension="false" capacity="40000">
+				<fillPlane fillType="EMPTYPALLET" node="viewEMPTYPALLET"    minY="2.1"       maxY="2.28" />
+			</storage>				
+			<storage   node="storage"       fillTypes="MINERAL_FEED"  isExtension="false" capacity="40000">
+				<fillPlane fillType="MINERAL_FEED" node="viewMINERAL_FEED"    minY="2.1"       maxY="2.28" />
+			</storage>							
+			<storage   node="storage"       fillTypes="SILAGE_ADDITIVE"  isExtension="false" capacity="40000">
+				<fillPlane fillType="SILAGE_ADDITIVE" node="viewSILAGE_ADDITIVE"    minY="2.1"       maxY="2.28" />
+			</storage>				           				
+		</storages> 
+            
+        <siloObjectFillLevels useSubNodesInsteadOfMainNodes="true">
+               <siloObjectFillLevel fillType="OLIVE_OIL" rootNode="fillPlane_oliveOil"              maxAtFillLevel="40000"  minAtFillLevel="10000"/>
+               <siloObjectFillLevel fillType="SUNFLOWER_OIL" rootNode="fillPlane_sunflowerOil"      maxAtFillLevel="40000"  minAtFillLevel="10000"/>  
+               <siloObjectFillLevel fillType="CANOLA_OIL" rootNode="fillPlane_canolaOil"            maxAtFillLevel="40000"  minAtFillLevel="10000"/>          
+               <siloObjectFillLevel fillType="EMPTYPALLET" rootNode="fillPlane_emptypallet1"        maxAtFillLevel="40000"  minAtFillLevel="10000"/>
+               <siloObjectFillLevel fillType="FLOUR" rootNode="fillPlane_Floor"                     maxAtFillLevel="40000"  minAtFillLevel="10000"/>  
+               <siloObjectFillLevel fillType="SUGAR" rootNode="fillPlane_sugar"                     maxAtFillLevel="40000"  minAtFillLevel="10000"/>   
+               <siloObjectFillLevel fillType="CEREAL" rootNode="fillPlane_cereals"                  maxAtFillLevel="40000"  minAtFillLevel="10000"/>
+               <siloObjectFillLevel fillType="FURNITURE" rootNode="fillPlane_furnitureStacks"       maxAtFillLevel="40000"  minAtFillLevel="10000"/> 
+               <siloObjectFillLevel fillType="CLOTHES" rootNode="fillPlane_clothes"                 maxAtFillLevel="40000"  minAtFillLevel="10000"/>
+               <siloObjectFillLevel fillType="FABRIC" rootNode="fillPlane_fabrics"                  maxAtFillLevel="40000"  minAtFillLevel="10000"/> 
+               <siloObjectFillLevel fillType="BUTTER" rootNode="fillPlane_butter"                   maxAtFillLevel="40000"  minAtFillLevel="10000"/> 
+               <siloObjectFillLevel fillType="CHOCOLATE" rootNode="fillPlane_chocolate"             maxAtFillLevel="40000"  minAtFillLevel="10000"/>
+               <siloObjectFillLevel fillType="RAISINS" rootNode="fillPlane_raisin"                  maxAtFillLevel="40000"  minAtFillLevel="10000"/>    
+               <siloObjectFillLevel fillType="STRAWBERRY" rootNode="fillPlane_strawberry"           maxAtFillLevel="40000"  minAtFillLevel="10000"/> 
+               <siloObjectFillLevel fillType="LETTUCE" rootNode="fillPlane_lettuce"                 maxAtFillLevel="40000"  minAtFillLevel="10000"/>
+               <siloObjectFillLevel fillType="TOMATO" rootNode="fillPlane_tomato"                   maxAtFillLevel="40000"  minAtFillLevel="10000"/>  
+               <siloObjectFillLevel fillType="BREAD" rootNode="fillPlane_bread"                     maxAtFillLevel="40000"  minAtFillLevel="10000"/>  
+               <siloObjectFillLevel fillType="EGG" rootNode="fillPlane_egg"                         maxAtFillLevel="40000"  minAtFillLevel="10000"/>  
+               <siloObjectFillLevel fillType="CAKE" rootNode="fillPlane_cake"                       maxAtFillLevel="40000"  minAtFillLevel="10000"/>   
+               <siloObjectFillLevel fillType="HONEY" rootNode="fillPlane_honey"                     maxAtFillLevel="40000"  minAtFillLevel="10000"/>  
+               <siloObjectFillLevel fillType="GRAPEJUICE" rootNode="fillPlane_grapejuice"           maxAtFillLevel="40000"  minAtFillLevel="10000"/>  
+               <siloObjectFillLevel fillType="CHEESE" rootNode="fillPlane_cheese"                   maxAtFillLevel="40000"  minAtFillLevel="10000"/>  
+               <siloObjectFillLevel fillType="BOARDS" rootNode="fillPlane_boards"                   maxAtFillLevel="40000"  minAtFillLevel="10000"/>    
+               <siloObjectFillLevel fillType="WOOL" rootNode="fillPlane_wool"                       maxAtFillLevel="40000"  minAtFillLevel="10000"/>                                                                                                                                                                                                                            
+               <siloObjectFillLevel fillType="MINERAL_FEED" rootNode="fillPlane_MINERAL_FEED"       maxAtFillLevel="40000"  minAtFillLevel="10000"/>  
+ 
+               <siloObjectFillLevel fillType="SILAGE_ADDITIVE" rootNode="fillPlane_SILAGE_ADDITIVE" maxAtFillLevel="40000"  minAtFillLevel="10000"/>                                                                                                                                                                                                                            
+                                                                                                                                                                                                                         
+        </siloObjectFillLevels>
+        
+        <siloDisplays>
+            <!--Display 1  -->
+			<display rootNode="0>4|0" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine fillType="OLIVE_OIL" 		 fillLevelNode="0>4|0|0|5"  lineSize="0.07"   lineTitleAlignment="RIGHT"    lineColor="0 5 0 1" fillWarningNode="0>4|0|0|16" fillWarningType="empty"/>
+				<displayLine fillType="OLIVE_OIL" 		  capacityNode="0>4|0|0|6"  lineSize="0.07"  lineTitleAlignment="RIGHT"     lineColor="10 0 0 1"/>
+				<displayLine fillType="SUNFLOWER_OIL" 	 fillLevelNode="0>4|0|0|7"  lineSize="0.07"   lineTitleAlignment="RIGHT"    lineColor="0 5 0 1" fillWarningNode="0>4|0|0|17" fillWarningType="empty"/>
+				<displayLine fillType="SUNFLOWER_OIL" 	  capacityNode="0>4|0|0|8"  lineSize="0.07"  lineTitleAlignment="RIGHT"     lineColor="10 0 0 1"/>
+				<displayLine fillType="CANOLA_OIL" 		 fillLevelNode="0>4|0|0|10" lineSize="0.07"    lineTitleAlignment="RIGHT"   lineColor="0 5 0 1" fillWarningNode="0>4|0|0|18" fillWarningType="empty"/>
+				<displayLine fillType="CANOLA_OIL" 		  capacityNode="0>4|0|0|9"  lineSize="0.07"   lineTitleAlignment="RIGHT"    lineColor="10 0 0 1"/> 
+				<displayLine headLineText="$l10n_1Logistikzentrum&#xA;Halle 1 Regal 1" 	                                  font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.06"   headLineNode="0>4|0|0|2"   lineColor="1 1 1 1"  />
+                <displayLine headLineText="$l10n_1Produkt                Bestand             Lager Kapazität"             font="GENERIC" lineTitleAlignment="CENTER"   lineSize="0.04"   headLineNode="0>4|0|0|3"   lineColor="1 1 1 1" />
+                <displayLine headLineText="$l10n_1Olivenöl&#xA;&#xA;&#xA;&#xA;Rapsöl&#xA;&#xA;&#xA;&#xA;Sonnenblumenöl"   font="GENERIC" lineTitleAlignment="CENTER"   lineSize="0.03"   headLineNode="0>4|0|0|4"   lineColor="1 1 1 1" />
+                <displayLine headLineText="LSFACTORYMODS&#xA;MODS SINCE2019" 	                                          font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.012"  headLineNode="0>4|0|0|14"  lineColor="0.2 0.2 0.2 1" />
+                <displayLine headLineText="LSFACTORYMODS&#xA;MODS SINCE2019" 	                                          font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.012"  headLineNode="0>4|0|0|15"  lineColor="0.2 0.2 0.2 1" />                   
+			</display>
+            <!--Display 2  -->
+			<display rootNode="0>4|1" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine fillType="FLOUR" 	  fillLevelNode="0>4|1|0|5"  lineSize="0.07"   lineTitleAlignment="RIGHT"    lineColor="0 5 0 1" fillWarningNode="0>4|1|0|16" fillWarningType="empty"/>
+				<displayLine fillType="FLOUR" 	   capacityNode="0>4|1|0|6"  lineSize="0.07"  lineTitleAlignment="RIGHT"     lineColor="10 0 0 1"/>
+				<displayLine fillType="SUGAR" 	  fillLevelNode="0>4|1|0|7"  lineSize="0.07"   lineTitleAlignment="RIGHT"        lineColor="0 5 0 1" fillWarningNode="0>4|1|0|17" fillWarningType="empty"/>
+				<displayLine fillType="SUGAR" 	   capacityNode="0>4|1|0|8"  lineSize="0.07"  lineTitleAlignment="RIGHT"         lineColor="10 0 0 1"/>
+				<displayLine fillType="CEREAL" 	  fillLevelNode="0>4|1|0|10" lineSize="0.07"    lineTitleAlignment="RIGHT"   lineColor="0 5 0 1" fillWarningNode="0>4|1|0|18" fillWarningType="empty" />
+				<displayLine fillType="CEREAL" 	   capacityNode="0>4|1|0|9"  lineSize="0.07"   lineTitleAlignment="RIGHT"    lineColor="10 0 0 1"/> 
+				<displayLine headLineText="$l10n_1Logistikzentrum&#xA;Halle 1 Regal 2" 	                          font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.06"   headLineNode="0>4|1|0|2"  lineColor="1 1 1 1"  />
+                <displayLine headLineText="$l10n_1Produkt                Bestand             Lager Kapazität"     font="GENERIC" lineTitleAlignment="CENTER"   lineSize="0.04"   headLineNode="0>4|1|0|3"  lineColor="1 1 1 1" />
+                <displayLine headLineText="$l10n_1Mehl&#xA;&#xA;&#xA;&#xA;Zucker&#xA;&#xA;&#xA;&#xA;Müsli"        font="GENERIC" lineTitleAlignment="CENTER"   lineSize="0.03"   headLineNode="0>4|1|0|4"  lineColor="1 1 1 1" />
+                <displayLine headLineText="LSFACTORYMODS&#xA;MODS SINCE2019" 	                                  font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.012"  headLineNode="0>4|1|0|14" lineColor="0.2 0.2 0.2 1" />
+                <displayLine headLineText="LSFACTORYMODS&#xA;MODS SINCE2019" 	                                  font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.012"  headLineNode="0>4|1|0|15" lineColor="0.2 0.2 0.2 1" />                       
+			</display>
+            <!--Display 3  -->
+			<display rootNode="0>4|2" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine fillType="FURNITURE" 	 fillLevelNode="0>4|2|0|5"  lineSize="0.07"    lineTitleAlignment="RIGHT"   lineColor="0 5 0 1" fillWarningNode="0>4|2|0|16" fillWarningType="empty"/>
+				<displayLine fillType="FURNITURE" 	  capacityNode="0>4|2|0|6"  lineSize="0.07"   lineTitleAlignment="RIGHT"    lineColor="10 0 0 1"/>
+				<displayLine fillType="CLOTHES" 	 fillLevelNode="0>4|2|0|7"  lineSize="0.07"    lineTitleAlignment="RIGHT"   lineColor="0 5 0 1" fillWarningNode="0>4|2|0|17" fillWarningType="empty"/>
+				<displayLine fillType="CLOTHES" 	  capacityNode="0>4|2|0|8"  lineSize="0.07"   lineTitleAlignment="RIGHT"    lineColor="10 0 0 1"/>
+				<displayLine fillType="FABRIC" 		 fillLevelNode="0>4|2|0|10" lineSize="0.07"     lineTitleAlignment="RIGHT"  lineColor="0 5 0 1" fillWarningNode="0>4|2|0|18" fillWarningType="empty"/>
+				<displayLine fillType="FABRIC" 		  capacityNode="0>4|2|0|9"  lineSize="0.07"    lineTitleAlignment="RIGHT"   lineColor="10 0 0 1"/> 
+				<displayLine headLineText="$l10n_1Logistikzentrum&#xA;Halle 1 Regal 3" 	                      font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.06"   headLineNode="0>4|2|0|2"   lineColor="1 1 1 1"  />
+                <displayLine headLineText="$l10n_1Produkt                Bestand             Lager Kapazität" font="GENERIC" lineTitleAlignment="CENTER"   lineSize="0.04"   headLineNode="0>4|2|0|3"   lineColor="1 1 1 1" />
+                <displayLine headLineText="$l10n_1Möbel&#xA;&#xA;&#xA;&#xA;Kleidung&#xA;&#xA;&#xA;&#xA;Stoff" font="GENERIC" lineTitleAlignment="CENTER"   lineSize="0.03"   headLineNode="0>4|2|0|4"   lineColor="1 1 1 1" />
+                <displayLine headLineText="LSFACTORYMODS&#xA;MODS SINCE2019" 	                              font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.012"  headLineNode="0>4|2|0|14"  lineColor="0.2 0.2 0.2 1" />
+                <displayLine headLineText="LSFACTORYMODS&#xA;MODS SINCE2019" 	                              font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.012"  headLineNode="0>4|2|0|15"  lineColor="0.2 0.2 0.2 1" />                          
+			</display>
+            <!--Display 5 -->
+			<display rootNode="0>4|4" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine fillType="BUTTER" 		  fillLevelNode="0>4|4|0|5"  lineSize="0.07"    lineTitleAlignment="RIGHT"   lineColor="0 5 0 1" fillWarningNode="0>4|4|0|16" fillWarningType="empty"/>
+				<displayLine fillType="BUTTER" 		   capacityNode="0>4|4|0|6"  lineSize="0.07"   lineTitleAlignment="RIGHT"    lineColor="10 0 0 1"/>
+				<displayLine fillType="CHOCOLATE" 	  fillLevelNode="0>4|4|0|7"  lineSize="0.07"    lineTitleAlignment="RIGHT"   lineColor="0 5 0 1" fillWarningNode="0>4|4|0|17" fillWarningType="empty"/>
+				<displayLine fillType="CHOCOLATE" 	   capacityNode="0>4|4|0|8"  lineSize="0.07"   lineTitleAlignment="RIGHT"    lineColor="10 0 0 1"/>
+				<displayLine fillType="RAISINS" 	  fillLevelNode="0>4|4|0|10" lineSize="0.07"     lineTitleAlignment="RIGHT"  lineColor="0 5 0 1" fillWarningNode="0>4|4|0|18" fillWarningType="empty"/>
+				<displayLine fillType="RAISINS" 	   capacityNode="0>4|4|0|9"  lineSize="0.07"    lineTitleAlignment="RIGHT"   lineColor="10 0 0 1"/> 
+				<displayLine headLineText="$l10n_1Logistikzentrum&#xA;Halle 2 Regal 1" 	                            font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.06"   headLineNode="0>4|4|0|2"   lineColor="1 1 1 1"  />
+                <displayLine headLineText="$l10n_1Produkt                Bestand             Lager Kapazität"       font="GENERIC" lineTitleAlignment="CENTER"   lineSize="0.04"   headLineNode="0>4|4|0|3"   lineColor="1 1 1 1" />
+                <displayLine headLineText="$l10n_1Butter&#xA;&#xA;&#xA;&#xA;Schokolade&#xA;&#xA;&#xA;&#xA;Rosinen"  font="GENERIC" lineTitleAlignment="CENTER"   lineSize="0.03"   headLineNode="0>4|4|0|4"   lineColor="1 1 1 1" />
+                <displayLine headLineText="LSFACTORYMODS&#xA;MODS SINCE2019" 	                                    font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.012"  headLineNode="0>4|4|0|14"  lineColor="0.2 0.2 0.2 1" />
+                 <displayLine headLineText="LSFACTORYMODS&#xA;MODS SINCE2019" 	                                    font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.012"  headLineNode="0>4|4|0|15"  lineColor="0.2 0.2 0.2 1" />                     
+			</display>
+            <!--Display 6 -->
+			<display rootNode="0>4|5" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine fillType="STRAWBERRY" 	   fillLevelNode="0>4|5|0|5"  lineSize="0.07"    lineTitleAlignment="RIGHT"    lineColor="0 5 0 1" fillWarningNode="0>4|5|0|16" fillWarningType="empty"/>
+				<displayLine fillType="STRAWBERRY" 	    capacityNode="0>4|5|0|6"  lineSize="0.07"   lineTitleAlignment="RIGHT"     lineColor="10 0 0 1"/>
+				<displayLine fillType="LETTUCE" 	   fillLevelNode="0>4|5|0|7"  lineSize="0.07"    lineTitleAlignment="RIGHT"    lineColor="0 5 0 1" fillWarningNode="0>4|5|0|17" fillWarningType="empty"/>
+				<displayLine fillType="LETTUCE" 	    capacityNode="0>4|5|0|8"  lineSize="0.07"   lineTitleAlignment="RIGHT"     lineColor="10 0 0 1"/>
+				<displayLine fillType="TOMATO" 		   fillLevelNode="0>4|5|0|10" lineSize="0.07"     lineTitleAlignment="RIGHT"   lineColor="0 5 0 1" fillWarningNode="0>4|5|0|18" fillWarningType="empty"/>
+				<displayLine fillType="TOMATO" 		    capacityNode="0>4|5|0|9"  lineSize="0.07"    lineTitleAlignment="RIGHT"    lineColor="10 0 0 1"/> 
+				<displayLine headLineText="$l10n_1Logistikzentrum&#xA;Halle 2 Regal 2" 	                           font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.06"   headLineNode="0>4|5|0|2"    lineColor="1 1 1 1"  />
+                <displayLine headLineText="$l10n_1Produkt                Bestand             Lager Kapazität"      font="GENERIC" lineTitleAlignment="CENTER"   lineSize="0.04"   headLineNode="0>4|5|0|3"    lineColor="1 1 1 1" />
+                <displayLine headLineText="$l10n_1Erdbeeren&#xA;&#xA;&#xA;&#xA;Salat&#xA;&#xA;&#xA;&#xA;Tomaten"   font="GENERIC" lineTitleAlignment="CENTER"   lineSize="0.03"   headLineNode="0>4|5|0|4"    lineColor="1 1 1 1" />
+                <displayLine headLineText="LSFACTORYMODS&#xA;MODS SINCE2019" 	                                   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.012"  headLineNode="0>4|5|0|14"   lineColor="0.2 0.2 0.2 1" />
+                <displayLine headLineText="LSFACTORYMODS&#xA;MODS SINCE2019" 	                                   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.012"  headLineNode="0>4|5|0|15"   lineColor="0.2 0.2 0.2 1" />                     
+			</display>
+            <!--Display 7 -->
+			<display rootNode="0>4|6" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine fillType="BREAD" 	  fillLevelNode="0>4|6|0|5"  lineSize="0.07"       lineTitleAlignment="RIGHT"    lineColor="0 5 0 1" fillWarningNode="0>4|6|0|16" fillWarningType="empty"/>
+				<displayLine fillType="BREAD" 	   capacityNode="0>4|6|0|6"  lineSize="0.07"       lineTitleAlignment="RIGHT"     lineColor="10 0 0 1"/>
+				<displayLine fillType="EGG" 	  fillLevelNode="0>4|6|0|7"  lineSize="0.07"       lineTitleAlignment="RIGHT"    lineColor="0 5 0 1" fillWarningNode="0>4|6|0|17" fillWarningType="empty"/>
+				<displayLine fillType="EGG" 	   capacityNode="0>4|6|0|8"  lineSize="0.07"       lineTitleAlignment="RIGHT"     lineColor="10 0 0 1"/>
+				<displayLine fillType="CAKE" 	      fillLevelNode="0>4|6|0|10" lineSize="0.07"   lineTitleAlignment="RIGHT"    lineColor="0 5 0 1" fillWarningNode="0>4|6|0|18" fillWarningType="empty"/>
+				<displayLine fillType="CAKE" 	       capacityNode="0>4|6|0|9"  lineSize="0.07"   lineTitleAlignment="RIGHT"     lineColor="10 0 0 1"/> 
+				<displayLine headLineText="$l10n_1Logistikzentrum&#xA;Halle 2 Regal 3" 	                         font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.06"   headLineNode="0>4|6|0|2"   lineColor="1 1 1 1"  />
+                <displayLine headLineText="$l10n_1Produkt                Bestand             Lager Kapazität"    font="GENERIC" lineTitleAlignment="CENTER"   lineSize="0.04"   headLineNode="0>4|6|0|3"   lineColor="1 1 1 1" />
+                <displayLine headLineText="$l10n_1Brot&#xA;&#xA;&#xA;&#xA;Eier&#xA;&#xA;&#xA;&#xA;Kuchen"        font="GENERIC" lineTitleAlignment="CENTER"   lineSize="0.03"   headLineNode="0>4|6|0|4"   lineColor="1 1 1 1" />
+                <displayLine headLineText="LSFACTORYMODS&#xA;MODS SINCE2019" 	                                 font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.012"  headLineNode="0>4|6|0|14"  lineColor="0.2 0.2 0.2 1" />
+                <displayLine headLineText="LSFACTORYMODS&#xA;MODS SINCE2019" 	                                 font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.012"  headLineNode="0>4|6|0|15"  lineColor="0.2 0.2 0.2 1" />                    
+			</display>
+            <!--Display 8 -->
+			<display rootNode="0>4|7" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine fillType="HONEY" 		 fillLevelNode="0>4|7|0|5"  lineSize="0.07"   lineTitleAlignment="RIGHT" lineColor="0 5 0 1" fillWarningNode="0>4|7|0|16" fillWarningType="empty"/>
+				<displayLine fillType="HONEY" 		  capacityNode="0>4|7|0|6"  lineSize="0.07"   lineTitleAlignment="RIGHT" lineColor="10 0 0 1"/>
+				<displayLine fillType="GRAPEJUICE" 	 fillLevelNode="0>4|7|0|7"  lineSize="0.07"   lineTitleAlignment="RIGHT" lineColor="0 5 0 1" fillWarningNode="0>4|7|0|17" fillWarningType="empty"/>
+				<displayLine fillType="GRAPEJUICE" 	  capacityNode="0>4|7|0|8"  lineSize="0.07"   lineTitleAlignment="RIGHT" lineColor="10 0 0 1"/>
+				<displayLine fillType="CHEESE" 		 fillLevelNode="0>4|7|0|10" lineSize="0.07"   lineTitleAlignment="RIGHT" lineColor="0 5 0 1" fillWarningNode="0>4|7|0|18" fillWarningType="empty"/>
+				<displayLine fillType="CHEESE" 		  capacityNode="0>4|7|0|9"  lineSize="0.07"   lineTitleAlignment="RIGHT" lineColor="10 0 0 1"/> 
+				<displayLine headLineText="$l10n_1Logistikzentrum&#xA;Halle 2 Regal 4" 	                         font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.06"   headLineNode="0>4|7|0|2"   lineColor="1 1 1 1"  />
+                <displayLine headLineText="$l10n_1Produkt                Bestand             Lager Kapazität"    font="GENERIC" lineTitleAlignment="CENTER"   lineSize="0.04"   headLineNode="0>4|7|0|3"   lineColor="1 1 1 1" />
+                <displayLine headLineText="$l10n_1Honig&#xA;&#xA;&#xA;&#xA;Traubensaft&#xA;&#xA;&#xA;&#xA;Käse"  font="GENERIC" lineTitleAlignment="CENTER"   lineSize="0.03"   headLineNode="0>4|7|0|4"   lineColor="1 1 1 1" />
+                <displayLine headLineText="LSFACTORYMODS&#xA;MODS SINCE2019" 	                                 font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.012"  headLineNode="0>4|7|0|14"  lineColor="0.2 0.2 0.2 1" />
+                <displayLine headLineText="LSFACTORYMODS&#xA;MODS SINCE2019" 	                                 font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.012"  headLineNode="0>4|7|0|15" lineColor="0.2 0.2 0.2 1" />                    
+			</display>
+            <!--Display 9 -->
+			<display rootNode="0>4|8" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine fillType="BOARDS" 			 fillLevelNode="0>4|8|0|5"  lineSize="0.07" lineTitleAlignment="CENTER" lineColor="0 5 0 1"    fillWarningNode="0>4|8|0|16" fillWarningType="empty"/>
+				<displayLine fillType="BOARDS" 			  capacityNode="0>4|8|0|6"  lineSize="0.07" lineTitleAlignment="CENTER" lineColor="10 0 0 1"/>
+				<displayLine fillType="WOOL" 			 fillLevelNode="0>4|8|0|7"  lineSize="0.07" lineTitleAlignment="CENTER" lineColor="0 5 0 1"    fillWarningNode="0>4|8|0|17" fillWarningType="empty"/>
+				<displayLine fillType="WOOL" 			  capacityNode="0>4|8|0|8"  lineSize="0.07" lineTitleAlignment="CENTER" lineColor="10 0 0 1"/>
+				<displayLine fillType="EMPTYPALLET" 	 fillLevelNode="0>4|8|0|10" lineSize="0.07" lineTitleAlignment="CENTER" lineColor="0 5 0 1"    fillWarningNode="0>4|8|0|18" fillWarningType="empty" />
+				<displayLine fillType="EMPTYPALLET" 	  capacityNode="0>4|8|0|9"  lineSize="0.07" lineTitleAlignment="CENTER" lineColor="10 0 0 1"  />
+                                                          
+				<displayLine headLineText="$l10n_1Logistikzentrum&#xA;Halle 3 Regal 2" 	                            font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.06"   headLineNode="0>4|8|0|2"  lineColor="1 1 1 1"  />
+                <displayLine headLineText="$l10n_1Produkt                Bestand             Lager Kapazität"       font="GENERIC" lineTitleAlignment="CENTER"   lineSize="0.04"   headLineNode="0>4|8|0|3"  lineColor="1 1 1 1" />
+                <displayLine headLineText="$l10n_1Bretter&#xA;&#xA;&#xA;&#xA;Wolle&#xA;&#xA;&#xA;&#xA;Leerpaletten" font="GENERIC" lineTitleAlignment="CENTER"   lineSize="0.03"   headLineNode="0>4|8|0|4"  lineColor="1 1 1 1" />
+                <displayLine headLineText="LSFACTORYMODS&#xA;MODS SINCE2019" 	                                    font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.012"  headLineNode="0>4|8|0|14" lineColor="0.2 0.2 0.2 1" />
+                <displayLine headLineText="LSFACTORYMODS&#xA;MODS SINCE2019" 	                                    font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.012"  headLineNode="0>4|8|0|15" lineColor="0.2 0.2 0.2 1" />                        
+			</display>
+            <!--Display 10 -->
+			<display rootNode="0>4|9" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine fillType="MINERAL_FEED" 		 fillLevelNode="0>4|9|0|5"  lineSize="0.07"   lineTitleAlignment="RIGHT"   lineColor="0 5 0 1" fillWarningNode="0>4|9|0|13" fillWarningType="empty" />   
+				<displayLine fillType="MINERAL_FEED" 		  capacityNode="0>4|9|0|6"  lineSize="0.07"  lineTitleAlignment="RIGHT"    lineColor="10 0 0 1"/>
+				<displayLine fillType="SILAGE_ADDITIVE" 	 fillLevelNode="0>4|9|0|10" lineSize="0.07"    lineTitleAlignment="RIGHT"  lineColor="0 5 0 1" fillWarningNode="0>4|9|0|14" fillWarningType="empty"/>
+				<displayLine fillType="SILAGE_ADDITIVE" 	  capacityNode="0>4|9|0|9"  lineSize="0.07"   lineTitleAlignment="RIGHT"   lineColor="10 0 0 1"/> 
+				<displayLine headLineText="$l10n_1Logistikzentrum&#xA;Halle 3 Regal 3" 	                                     font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.06"   headLineNode="0>4|9|0|2"   lineColor="1 1 1 1"  />
+                <displayLine headLineText="$l10n_1Produkt                Bestand             Lager Kapazität"                font="GENERIC" lineTitleAlignment="CENTER"   lineSize="0.04"   headLineNode="0>4|9|0|3"   lineColor="1 1 1 1" />
+                <displayLine headLineText="$l10n_1Mineralfutter&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;Silagezusatz"         font="GENERIC" lineTitleAlignment="CENTER"   lineSize="0.03"   headLineNode="0>4|9|0|4"   lineColor="1 1 1 1" />
+                <displayLine headLineText="LSFACTORYMODS&#xA;MODS SINCE2019" 	                                             font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.012"  headLineNode="0>4|9|0|11"   lineColor="0.2 0.2 0.2 1" />
+                <displayLine headLineText="LSFACTORYMODS&#xA;MODS SINCE2019" 	                                             font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.012"  headLineNode="0>4|9|0|12" lineColor="0.2 0.2 0.2 1" />                    
+			</display>
+            <!--Display Toranzeige5 -->
+			<display rootNode="0>4|13" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine headLineText="$l10n_1LogistikZentrum" 	  font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|13|0|0"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Hannover" 	      font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|13|0|1"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1TOR&#xA;5" 	      font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.12"    headLineNode="0>4|13|0|3"   lineColor="0.413 0.220 0.074 1"  />
+				<displayLine headLineText="$l10n_1Warenannahme" 	  font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|13|0|2"   lineColor="1 1 1 1"  /> 
+				<displayLine headLineText="$l10n_1TOR&#xA;5" 	      font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.25"     headLineNode="0>4|22|0|0"   lineColor="1 1 1 1"  />                               
+			</display>
+            <!--Display Toranzeige4 -->
+			<display rootNode="0>4|14" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine headLineText="$l10n_1LogistikZentrum" 	 font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|14|0|0"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Hannover" 	     font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|14|0|1"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1TOR&#xA;4" 	     font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.12"    headLineNode="0>4|14|0|3"   lineColor="0.413 0.220 0.074 1"  />
+				<displayLine headLineText="$l10n_1Warenannahme" 	 font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|14|0|2"   lineColor="1 1 1 1"  /> 
+				<displayLine headLineText="$l10n_1TOR&#xA;4" 	     font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.25"     headLineNode="0>4|23|0|0"   lineColor="1 1 1 1"  />                            
+			</display>
+            <!--Display Toranzeige3 -->
+			<display rootNode="0>4|15" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine headLineText="$l10n_1LogistikZentrum" 	 font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|15|0|0"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Hannover" 	     font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|15|0|1"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1TOR&#xA;3" 	     font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.12"    headLineNode="0>4|15|0|3"   lineColor="0.413 0.220 0.074 1"  />
+				<displayLine headLineText="$l10n_1Warenannahme" 	 font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|15|0|2"   lineColor="1 1 1 1"  /> 
+				<displayLine headLineText="$l10n_1TOR&#xA;3" 	     font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.25"     headLineNode="0>4|24|0|0"   lineColor="1 1 1 1"  />                            
+			</display>
+            <!--Display Toranzeige2 -->
+			<display rootNode="0>4|16" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine headLineText="$l10n_1LogistikZentrum" 	 font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|16|0|0"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Hannover" 	     font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|16|0|1"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1TOR&#xA;2" 	     font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.12"    headLineNode="0>4|16|0|3"   lineColor="0.413 0.220 0.074 1"  />
+				<displayLine headLineText="$l10n_1Warenannahme" 	 font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|16|0|2"   lineColor="1 1 1 1"  /> 
+				<displayLine headLineText="$l10n_1TOR&#xA;2" 	     font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.25"     headLineNode="0>4|25|0|0"   lineColor="1 1 1 1"  />                          
+			</display>
+            <!--Display Toranzeige1 -->
+			<display rootNode="0>4|17" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine headLineText="$l10n_1LogistikZentrum" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|17|0|0"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Hannover" 	       font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|17|0|1"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1TOR&#xA;1" 	       font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.12"    headLineNode="0>4|17|0|3"   lineColor="0.413 0.220 0.074 1"  />
+				<displayLine headLineText="$l10n_1Warenannahme" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|17|0|2"   lineColor="1 1 1 1"  /> 
+				<displayLine headLineText="$l10n_1TOR&#xA;1" 	       font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.25"     headLineNode="0>4|26|0|0"   lineColor="1 1 1 1"  />                             
+			</display>
+            <!--Display Toranzeige6 -->
+			<display rootNode="0>4|18" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine headLineText="$l10n_1LogistikZentrum" font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|18|0|0"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Hannover" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|18|0|1"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1TOR&#xA;6" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.12"    headLineNode="0>4|18|0|3"   lineColor="0.413 0.220 0.074 1"  />
+				<displayLine headLineText="$l10n_1Warenausgabe"    font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|18|0|2"   lineColor="1 1 1 1"  /> 
+				<displayLine headLineText="$l10n_1TOR&#xA;6" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.25"   headLineNode="0>4|28|0|0"   lineColor="1 1 1 1"  />   
+			</display>
+            <!--Display Toranzeige7 -->
+			<display rootNode="0>4|19" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine headLineText="$l10n_1LogistikZentrum" 	  font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|19|0|0"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Hannover" 	      font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|19|0|1"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1TOR&#xA;7" 	      font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.12"    headLineNode="0>4|19|0|3"   lineColor="0.413 0.220 0.074 1"  />
+				<displayLine headLineText="$l10n_1Warenannahme" 	  font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|19|0|2"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1TOR&#xA;7" 	      font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.25"   headLineNode="0>4|27|0|0"   lineColor="1 1 1 1"  />                            
+			</display>
+            <!--Display Toranzeige8 -->
+			<display rootNode="0>4|20" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine headLineText="$l10n_1LogistikZentrum" font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|20|0|0"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Hannover" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|20|0|1"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1TOR&#xA;8" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.12"    headLineNode="0>4|20|0|3"   lineColor="0.413 0.220 0.074 1"  />
+				<displayLine headLineText="$l10n_1Warenausgabe"    font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|20|0|2"   lineColor="1 1 1 1"  /> 
+				<displayLine headLineText="$l10n_1TOR&#xA;8" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.25"   headLineNode="0>4|29|0|0"   lineColor="1 1 1 1"  />                            
+			</display>
+            <!--Display Toranzeige9 -->
+			<display rootNode="0>4|21" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine headLineText="$l10n_1LogistikZentrum" 	font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|21|0|0"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Hannover" 	    font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|21|0|1"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1TOR&#xA;9" 	    font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.12"    headLineNode="0>4|21|0|3"   lineColor="0.413 0.220 0.074 1"  />
+				<displayLine headLineText="$l10n_1Warenausgabe" 	font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.075"   headLineNode="0>4|21|0|2"   lineColor="1 1 1 1"  /> 
+				<displayLine headLineText="$l10n_1TOR&#xA;9" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.25"   headLineNode="0>4|30|0|0"   lineColor="1 1 1 1"  />                            
+			</display>
+           <!--Display hallentor Anzeigen -->
+			<display rootNode="0>4|31" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine headLineText="$l10n_1Büro&#xA;Disposition" font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.1"   headLineNode="0>4|31|0|0"   lineColor="1 1 1 1"  />        
+			</display>
+			<display rootNode="0>4|32" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine headLineText="$l10n_1Hochregal&#xA;Halle" font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.12"   headLineNode="0>4|32|0|0"   lineColor="1 1 1 1"  /> 
+                <displayLine fillType="OLIVE_OIL" 		 fillWarningNode="0>4|32|0|10"  fillWarningType="empty" />
+ 				<displayLine fillType="OLIVE_OIL" 		 fillWarningNode="0>4|32|0|19"  fillWarningType="full"/>                            
+ 				<displayLine fillType="OLIVE_OIL" 		 fillWarningNode="0>4|0|0|19"  fillWarningType="full"/>                            
+                <displayLine fillType="CANOLA_OIL" 		 fillWarningNode="0>4|32|0|11"  fillWarningType="empty" />
+ 				<displayLine fillType="CANOLA_OIL" 		 fillWarningNode="0>4|32|0|20"  fillWarningType="full"/>                            
+ 				<displayLine fillType="CANOLA_OIL" 		 fillWarningNode="0>4|0|0|21"  fillWarningType="full"/>                            
+                <displayLine fillType="SUNFLOWER_OIL" 	 fillWarningNode="0>4|32|0|12"  fillWarningType="empty" />
+ 				<displayLine fillType="SUNFLOWER_OIL" 	 fillWarningNode="0>4|32|0|21"  fillWarningType="full"/>                            
+ 				<displayLine fillType="SUNFLOWER_OIL" 	 fillWarningNode="0>4|0|0|20"  fillWarningType="full"/>                            
+                <displayLine fillType="FLOUR" 			 fillWarningNode="0>4|32|0|14"  fillWarningType="empty" />
+ 				<displayLine fillType="FLOUR" 			 fillWarningNode="0>4|32|0|23"  fillWarningType="full"/>                            
+ 				<displayLine fillType="FLOUR" 			 fillWarningNode="0>4|1|0|19"  fillWarningType="full"/>                            
+                <displayLine fillType="SUGAR" 			 fillWarningNode="0>4|32|0|13"  fillWarningType="empty" />
+ 				<displayLine fillType="SUGAR" 			 fillWarningNode="0>4|32|0|22"  fillWarningType="full"/>                            
+ 				<displayLine fillType="SUGAR" 			 fillWarningNode="0>4|1|0|20"  fillWarningType="full"/>                            
+                <displayLine fillType="CEREAL" 			 fillWarningNode="0>4|32|0|15"  fillWarningType="empty" />
+ 				<displayLine fillType="CEREAL" 			 fillWarningNode="0>4|32|0|24"  fillWarningType="full"/>                            
+ 				<displayLine fillType="CEREAL" 			 fillWarningNode="0>4|1|0|21"  fillWarningType="full"/>                            
+                <displayLine fillType="FURNITURE" 		 fillWarningNode="0>4|32|0|16"  fillWarningType="empty" />
+ 				<displayLine fillType="FURNITURE" 		 fillWarningNode="0>4|32|0|25"  fillWarningType="full"/>                            
+ 				<displayLine fillType="FURNITURE" 		 fillWarningNode="0>4|2|0|19"  fillWarningType="full"/>                            
+                <displayLine fillType="CLOTHES" 		 fillWarningNode="0>4|32|0|17"  fillWarningType="empty" />
+ 				<displayLine fillType="CLOTHES" 		 fillWarningNode="0>4|32|0|26"  fillWarningType="full"/>                            
+ 				<displayLine fillType="CLOTHES" 		 fillWarningNode="0>4|2|0|20"  fillWarningType="full"/>                            
+                <displayLine fillType="FABRIC" 			 fillWarningNode="0>4|32|0|18"  fillWarningType="empty" />
+ 				<displayLine fillType="FABRIC" 			 fillWarningNode="0>4|32|0|27"  fillWarningType="full"/>                            
+ 				<displayLine fillType="FABRIC" 			 fillWarningNode="0>4|2|0|21"  fillWarningType="full"/>                            
+			</display>
+			<display rootNode="0>4|33" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine headLineText="$l10n_1Kleine Halle"  font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.14"   headLineNode="0>4|33|0|0"   lineColor="1 1 1 1"  />  
+                <displayLine fillType="BOARDS" 			 fillWarningNode="0>4|33|0|7"  fillWarningType="empty" />
+ 				<displayLine fillType="BOARDS" 			 fillWarningNode="0>4|33|0|13"  fillWarningType="full"/>                            
+ 				<displayLine fillType="BOARDS" 			 fillWarningNode="0>4|8|0|19"  fillWarningType="full"/>                            
+                <displayLine fillType="WOOL" 			 fillWarningNode="0>4|33|0|8"  fillWarningType="empty" />
+ 				<displayLine fillType="WOOL" 			 fillWarningNode="0>4|33|0|14"  fillWarningType="full"/>                            
+ 				<displayLine fillType="WOOL" 			 fillWarningNode="0>4|8|0|20"  fillWarningType="full"/>                            
+                <displayLine fillType="EMPTYPALLET" 	 fillWarningNode="0>4|33|0|9"  fillWarningType="empty" />
+ 				<displayLine fillType="EMPTYPALLET" 	 fillWarningNode="0>4|33|0|15"  fillWarningType="full"/>                            
+ 				<displayLine fillType="EMPTYPALLET" 	 fillWarningNode="0>4|8|0|21"  fillWarningType="full"/>                            
+                <displayLine fillType="MINERAL_FEED" 	 fillWarningNode="0>4|33|0|10"  fillWarningType="empty" />
+ 				<displayLine fillType="MINERAL_FEED" 	 fillWarningNode="0>4|33|0|16"  fillWarningType="full"/>                            
+ 				<displayLine fillType="MINERAL_FEED" 	 fillWarningNode="0>4|9|0|17"  fillWarningType="full"/>                                                    
+                <displayLine fillType="SILAGE_ADDITIVE"  fillWarningNode="0>4|33|0|12"  fillWarningType="empty" />
+ 				<displayLine fillType="SILAGE_ADDITIVE"  fillWarningNode="0>4|33|0|18"  fillWarningType="full"/>                            
+ 				<displayLine fillType="SILAGE_ADDITIVE"  fillWarningNode="0>4|9|0|18"  fillWarningType="full"/>                        
+			</display>
+			<display rootNode="0>4|34" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine headLineText="$l10n_1Kühlhaus" 	                                                                             font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.12"   headLineNode="0>4|34|0|0"   lineColor="1 1 1 1"  /> 
+				<displayLine headLineText="$l10n_1Tor bitte Geschlossen halten" 	 font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.07"   headLineNode="0>4|34|0|1"   lineColor="0.413 0.220 0.074 1"  /> 
+                <displayLine fillType="BUTTER" 		 fillWarningNode="0>4|34|0|8"  fillWarningType="empty" />
+ 				<displayLine fillType="BUTTER" 		 fillWarningNode="0>4|4|0|19"  fillWarningType="full"/>                                       
+                <displayLine fillType="BUTTER" 		 fillWarningNode="0>4|34|0|14" fillWarningType="full"/>                         
+                <displayLine fillType="RAISINS" 	 fillWarningNode="0>4|34|0|15" fillWarningType="full"/>                        
+                <displayLine fillType="RAISINS" 	 fillWarningNode="0>4|4|0|21"  fillWarningType="full"/>                        
+                <displayLine fillType="RAISINS" 	 fillWarningNode="0>4|34|0|9"  fillWarningType="empty"/>                        
+                <displayLine fillType="CHOCOLATE" 	 fillWarningNode="0>4|34|0|16" fillWarningType="full"/>                        
+                <displayLine fillType="CHOCOLATE" 	 fillWarningNode="0>4|4|0|20"  fillWarningType="full"/>                        
+                <displayLine fillType="CHOCOLATE" 	 fillWarningNode="0>4|34|0|10" fillWarningType="empty"/>                        
+                <displayLine fillType="STRAWBERRY" 	 fillWarningNode="0>4|34|0|17" fillWarningType="full"/>                        
+                <displayLine fillType="STRAWBERRY" 	 fillWarningNode="0>4|5|0|19" fillWarningType="full"/>                        
+                <displayLine fillType="STRAWBERRY" 	 fillWarningNode="0>4|34|0|11" fillWarningType="empty"/>                        
+                <displayLine fillType="LETTUCE" 	 fillWarningNode="0>4|34|0|18" fillWarningType="full"/>                        
+                <displayLine fillType="LETTUCE" 	 fillWarningNode="0>4|5|0|20" fillWarningType="full"/>                        
+                <displayLine fillType="LETTUCE" 	 fillWarningNode="0>4|34|0|12" fillWarningType="empty"/>                        
+                <displayLine fillType="TOMATO" 		 fillWarningNode="0>4|34|0|19" fillWarningType="full"/>                         
+                <displayLine fillType="TOMATO" 		 fillWarningNode="0>4|5|0|21" fillWarningType="full"/>                         
+                <displayLine fillType="TOMATO" 		 fillWarningNode="0>4|34|0|13" fillWarningType="empty"/>                         
+                <displayLine fillType="BREAD" 		 fillWarningNode="0>4|34|0|32" fillWarningType="full"  />                        
+                <displayLine fillType="BREAD" 		 fillWarningNode="0>4|6|0|19" fillWarningType="full"  />                        
+                <displayLine fillType="BREAD" 		 fillWarningNode="0>4|34|0|26" fillWarningType="empty"/>                        
+                <displayLine fillType="EGG" 		 fillWarningNode="0>4|34|0|33" fillWarningType="full"/>                        
+                <displayLine fillType="EGG" 		 fillWarningNode="0>4|6|0|20" fillWarningType="full"/>                        
+                <displayLine fillType="EGG" 		 fillWarningNode="0>4|34|0|27" fillWarningType="empty"/>                        
+                <displayLine fillType="CAKE" 		 fillWarningNode="0>4|34|0|34" fillWarningType="full"/>                        
+                <displayLine fillType="CAKE" 		 fillWarningNode="0>4|6|0|21" fillWarningType="full"/>                        
+                <displayLine fillType="CAKE" 		 fillWarningNode="0>4|34|0|28" fillWarningType="empty"/>                        
+                <displayLine fillType="HONEY" 		 fillWarningNode="0>4|34|0|35" fillWarningType="full"/>                        
+                <displayLine fillType="HONEY" 		 fillWarningNode="0>4|7|0|19" fillWarningType="full"/>                        
+                <displayLine fillType="HONEY" 		 fillWarningNode="0>4|34|0|29" fillWarningType="empty"/>                        
+                <displayLine fillType="GRAPEJUICE" 	 fillWarningNode="0>4|34|0|36" fillWarningType="full"/>                        
+                <displayLine fillType="GRAPEJUICE" 	 fillWarningNode="0>4|7|0|20" fillWarningType="full"/>                        
+                <displayLine fillType="GRAPEJUICE" 	 fillWarningNode="0>4|34|0|30" fillWarningType="empty"/>                        
+                <displayLine fillType="CHEESE" 		 fillWarningNode="0>4|34|0|37" fillWarningType="full"/>                         
+                <displayLine fillType="CHEESE" 		 fillWarningNode="0>4|7|0|21" fillWarningType="full"/>                         
+                <displayLine fillType="CHEESE" 		 fillWarningNode="0>4|34|0|31" fillWarningType="empty"/>                         
+			</display>
+			<!-- displays tor und licht schalter -->
+ 			<display rootNode="0>8" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+                  <displayLine headLineText="$l10n_1Umschlag&#xA;Halle&#xA;&#xA;Licht Aus    Licht An" 	       font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.02"    headLineNode="0>16|0|8|3"   lineColor="1 1 1 1"  />
+			      <displayLine headLineText="$l10n_1Kleine&#xA;Halle&#xA;&#xA;Licht Aus    Licht An" 	       font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.02"    headLineNode="0>16|1|6|3"   lineColor="1 1 1 1"  />
+			      <displayLine headLineText="$l10n_1Kühlhaus&#xA;Halle&#xA;&#xA;Licht Aus    Licht An" 	       font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.02"    headLineNode="0>16|3|4|3"   lineColor="1 1 1 1"  />
+			      <displayLine headLineText="$l10n_1Hochregal&#xA;Halle&#xA;&#xA;Licht Aus    Licht An" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.02"    headLineNode="0>16|2|4|3"   lineColor="1 1 1 1"  />
+			      <displayLine headLineText="$l10n_1Umschlag&#xA;Halle&#xA;&#xA;&#xA;Tor Zu    Tor Auf" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.02"    headLineNode="0>8|0|6|3"   lineColor="1 1 1 1"  />       
+			      <displayLine headLineText="$l10n_1Büro&#xA;&#xA;Licht Aus    Licht An" 	                   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.02"    headLineNode="0>16|4|4|3"   lineColor="1 1 1 1"  />       
+			      <displayLine headLineText="$l10n_1TOR 1" 	                                                   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.035"   headLineNode="0>8|0|6|4"   lineColor="0.413 0.220 0.074 1"  />
+			      <displayLine headLineText="$l10n_1Umschlag&#xA;Halle&#xA;&#xA;&#xA;Tor Zu    Tor Auf" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.02"    headLineNode="0>8|1|6|3"   lineColor="1 1 1 1"  />       
+			      <displayLine headLineText="$l10n_1TOR 2" 	                                                   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.035"   headLineNode="0>8|1|6|4"   lineColor="0.413 0.220 0.074 1"  /> 
+			      <displayLine headLineText="$l10n_1Umschlag&#xA;Halle&#xA;&#xA;&#xA;Tor Zu    Tor Auf" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.02"    headLineNode="0>8|2|6|3"   lineColor="1 1 1 1"  />       
+			      <displayLine headLineText="$l10n_1TOR 3" 	                                                   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.035"   headLineNode="0>8|2|6|4"   lineColor="0.413 0.220 0.074 1"  />
+		          <displayLine headLineText="$l10n_1Umschlag&#xA;Halle&#xA;&#xA;&#xA;Tor Zu    Tor Auf" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.02"    headLineNode="0>8|3|6|3"   lineColor="1 1 1 1"  />       
+		          <displayLine headLineText="$l10n_1TOR 4"                                                     font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.035"   headLineNode="0>8|3|6|4"   lineColor="0.413 0.220 0.074 1"  /> 
+			      <displayLine headLineText="$l10n_1Umschlag&#xA;Halle&#xA;&#xA;&#xA;Tor Zu    Tor Auf" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.02"    headLineNode="0>8|4|6|3"   lineColor="1 1 1 1"  />       
+			      <displayLine headLineText="$l10n_1TOR 5" 	                                                   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.035"   headLineNode="0>8|4|6|4"   lineColor="0.413 0.220 0.074 1"  /> 
+			      <displayLine headLineText="$l10n_1Hochregal&#xA;Halle&#xA;&#xA;&#xA;Tor Zu    Tor Auf" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.02"    headLineNode="0>8|5|6|3"   lineColor="1 1 1 1"  />       
+			      <displayLine headLineText="$l10n_1TOR 10" 	                                               font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.035"   headLineNode="0>8|5|6|4"   lineColor="0.413 0.220 0.074 1"  />
+			      <displayLine headLineText="$l10n_1Hochregal&#xA;Halle&#xA;&#xA;&#xA;Tor Zu    Tor Auf" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.02"    headLineNode="0>8|5|5|3"   lineColor="1 1 1 1"  />       
+			      <displayLine headLineText="$l10n_1TOR 10" 	                                               font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.035"   headLineNode="0>8|5|5|4"   lineColor="0.413 0.220 0.074 1"  />                        
+			      <displayLine headLineText="$l10n_1Kleine&#xA;Halle&#xA;&#xA;&#xA;Tor Zu    Tor Auf" 	       font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.02"    headLineNode="0>8|6|5|3"   lineColor="1 1 1 1"  />       
+			      <displayLine headLineText="$l10n_1TOR 11" 	                                               font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.035"   headLineNode="0>8|6|5|4"   lineColor="0.413 0.220 0.074 1"  />   
+			      <displayLine headLineText="$l10n_1Kleine&#xA;Halle&#xA;&#xA;&#xA;Tor Zu    Tor Auf" 	       font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.02"    headLineNode="0>8|6|6|3"   lineColor="1 1 1 1"  />       
+			      <displayLine headLineText="$l10n_1TOR 11" 	                                               font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.035"   headLineNode="0>8|6|6|4"   lineColor="0.413 0.220 0.074 1"  />
+			      <displayLine headLineText="$l10n_1Umschlag&#xA;Halle&#xA;&#xA;&#xA;Tor Zu    Tor Auf" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.02"    headLineNode="0>8|7|5|3"   lineColor="1 1 1 1"  />       
+			      <displayLine headLineText="$l10n_1TOR 8" 	                                                   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.035"   headLineNode="0>8|7|5|4"   lineColor="0.413 0.220 0.074 1"  />       
+			      <displayLine headLineText="$l10n_1Umschlag&#xA;Halle&#xA;&#xA;&#xA;Tor Zu    Tor Auf" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.02"    headLineNode="0>8|8|5|3"   lineColor="1 1 1 1"  />       
+			      <displayLine headLineText="$l10n_1TOR 9" 	                                                   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.035"   headLineNode="0>8|8|5|4"   lineColor="0.413 0.220 0.074 1"  /> 
+			      <displayLine headLineText="$l10n_1Umschlag&#xA;Halle&#xA;&#xA;&#xA;Tor Zu    Tor Auf" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.02"    headLineNode="0>8|9|5|3"   lineColor="1 1 1 1"  />       
+			      <displayLine headLineText="$l10n_1TOR 12" 	                                               font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.035"   headLineNode="0>8|9|5|4"   lineColor="0.413 0.220 0.074 1"  />       
+			      <displayLine headLineText="$l10n_1Kühlhaus&#xA;Halle&#xA;&#xA;&#xA;Tor Zu    Tor Auf" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.02"    headLineNode="0>8|9|6|3"   lineColor="1 1 1 1"  />       
+			      <displayLine headLineText="$l10n_1TOR 12" 	                                               font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.035"   headLineNode="0>8|9|6|4"   lineColor="0.413 0.220 0.074 1"  />     
+			      <displayLine headLineText="$l10n_1Kühlhaus&#xA;Halle&#xA;&#xA;&#xA;Tor Zu    Tor Auf" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.02"    headLineNode="0>8|10|6|3"   lineColor="1 1 1 1"  />       
+			      <displayLine headLineText="$l10n_1TOR 7" 	                                                   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.035"   headLineNode="0>8|10|6|4"   lineColor="0.413 0.220 0.074 1"  />       
+			      <displayLine headLineText="$l10n_1Kühlhaus&#xA;Halle&#xA;&#xA;&#xA;Tor Zu    Tor Auf" 	   font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.02"    headLineNode="0>8|11|6|3"   lineColor="1 1 1 1"  />       
+			      <displayLine headLineText="$l10n_1TOR 6"                                                     font="GENERIC" lineTitleAlignment="CENTER" lineSize="0.035"   headLineNode="0>8|11|6|4"   lineColor="0.413 0.220 0.074 1"  /> 
+            </display>
+			<display rootNode="0>4|35" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine fillType="OLIVE_OIL"     fillLevelNode="0>4|35|0|4|0"  capacityNode="0>4|35|0|7|0"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|0|5|1" fillWarningType="full"   />
+				<displayLine fillType="OLIVE_OIL"     fillWarningNode="0>4|35|0|5|0" fillWarningType="empty"  />
+				<displayLine fillType="CANOLA_OIL"    fillLevelNode="0>4|35|0|4|1"  capacityNode="0>4|35|0|7|1"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|0|5|3" fillWarningType="full"  />
+				<displayLine fillType="CANOLA_OIL"    fillWarningNode="0>4|35|0|5|2" fillWarningType="empty"  />
+				<displayLine fillType="SUNFLOWER_OIL" fillLevelNode="0>4|35|0|4|2"  capacityNode="0>4|35|0|7|2"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|0|5|5" fillWarningType="full"  />
+				<displayLine fillType="SUNFLOWER_OIL" fillWarningNode="0>4|35|0|5|4" fillWarningType="empty"  />               
+				<displayLine fillType="FLOUR"   fillLevelNode="0>4|35|0|4|3"  capacityNode="0>4|35|0|7|3"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|0|5|7" fillWarningType="full"   />
+				<displayLine fillType="FLOUR"   fillWarningNode="0>4|35|0|5|6" fillWarningType="empty"  />
+				<displayLine fillType="SUGAR"   fillLevelNode="0>4|35|0|4|4"  capacityNode="0>4|35|0|7|4"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|0|5|9" fillWarningType="full"  />
+				<displayLine fillType="SUGAR"   fillWarningNode="0>4|35|0|5|8" fillWarningType="empty"  />
+				<displayLine fillType="CEREAL"  fillLevelNode="0>4|35|0|4|5"  capacityNode="0>4|35|0|7|5"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|0|5|11" fillWarningType="full"  />
+				<displayLine fillType="CEREAL"  fillWarningNode="0>4|35|0|5|10" fillWarningType="empty"  />
+				<displayLine fillType="FURNITURE" fillLevelNode="0>4|35|0|4|6"  capacityNode="0>4|35|0|7|6"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|0|5|13" fillWarningType="full"   />
+				<displayLine fillType="FURNITURE" fillWarningNode="0>4|35|0|5|12" fillWarningType="empty"  />
+				<displayLine fillType="CLOTHES"   fillLevelNode="0>4|35|0|4|7"  capacityNode="0>4|35|0|7|7"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|0|5|15" fillWarningType="full"  />
+				<displayLine fillType="CLOTHES"   fillWarningNode="0>4|35|0|5|14" fillWarningType="empty"  />
+				<displayLine fillType="FABRIC"    fillLevelNode="0>4|35|0|4|8"  capacityNode="0>4|35|0|7|8"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|0|5|17" fillWarningType="full"  />
+				<displayLine fillType="FABRIC"    fillWarningNode="0>4|35|0|5|16" fillWarningType="empty"  />
+				<displayLine headLineText="$l10n_1Produkt"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015"   headLineNode="0>4|35|0|6"     lineColor="1 1 1 1"  />
+				<displayLine headLineText="_______________________________________________________________________________________________________________"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015"   headLineNode="0>4|35|0|9"     lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Olivenöl"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"  headLineNode="0>4|35|0|6|0"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Rapsöl" 	    font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"   headLineNode="0>4|35|0|6|1"   lineColor="1 1 1 1"  /> 
+				<displayLine headLineText="$l10n_1Sonnenblumenöl"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"   headLineNode="0>4|35|0|6|2"   lineColor="1 1 1 1"  />              
+				<displayLine headLineText="$l10n_1Mehl"   font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"  headLineNode="0>4|35|0|6|3" lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Zucker" font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"  headLineNode="0>4|35|0|6|4" lineColor="1 1 1 1"  /> 
+				<displayLine headLineText="$l10n_1Müsli"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"  headLineNode="0>4|35|0|6|5" lineColor="1 1 1 1"  />                
+				<displayLine headLineText="$l10n_1Möbel"    font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"  headLineNode="0>4|35|0|6|6" lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Kleidung" font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"  headLineNode="0>4|35|0|6|7" lineColor="1 1 1 1"  /> 
+				<displayLine headLineText="$l10n_1Stoff"    font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"  headLineNode="0>4|35|0|6|8" lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Bestand" 	   font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015"  headLineNode="0>4|35|0|4"  lineColor="1 1 1 1"  />                
+				<displayLine headLineText="$l10n_1LagerKapazität" font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015"  headLineNode="0>4|35|0|7" lineColor="1 1 1 1"  />                
+				<displayLine headLineText="$l10n_1Hochregal" 	  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.02"  headLineNode="0>4|35|0|0"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Auftrags Nr." font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015"  headLineNode="0>4|35|0|2"   lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 81244571"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|0|2|0" lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 81244572"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|0|2|1" lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 81244573"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|0|2|2" lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 81244574"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|0|2|3" lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 81244575"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|0|2|4" lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 81244576"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|0|2|5" lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 81244577"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|0|2|6" lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 81244578"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|0|2|7" lineColor="1 1 1 1"  /> 
+				<displayLine headLineText="$l10n_1AB 81244579"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|0|2|8" lineColor="1 1 1 1"  /> 
+                <displayLine headLineText="$l10n_1Datum"        font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|0|3"   lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|0|3|0" lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|0|3|1" lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|0|3|2" lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|0|3|3" lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|0|3|4" lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|0|3|5" lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|0|3|6" lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|0|3|7" lineColor="1 1 1 1"  />               
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|0|3|8" lineColor="1 1 1 1"  />               
+			</display>            
+			<display rootNode="0>4|35" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine fillType="BOARDS"     fillLevelNode="0>4|35|1|4|0"  capacityNode="0>4|35|1|7|0"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|1|5|1" fillWarningType="full"   />
+				<displayLine fillType="BOARDS"     fillWarningNode="0>4|35|1|5|0" fillWarningType="empty"  />
+				<displayLine fillType="WOOL"    fillLevelNode="0>4|35|1|4|1"  capacityNode="0>4|35|1|7|1"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|1|5|3" fillWarningType="full"  />
+				<displayLine fillType="WOOL"    fillWarningNode="0>4|35|1|5|2" fillWarningType="empty"  />
+				<displayLine fillType="EMPTYPALLET" fillLevelNode="0>4|35|1|4|2"  capacityNode="0>4|35|1|7|2"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|1|5|5" fillWarningType="full"  />
+				<displayLine fillType="EMPTYPALLET" fillWarningNode="0>4|35|1|5|4" fillWarningType="empty"  />               
+				<displayLine fillType="MINERAL_FEED"   fillLevelNode="0>4|35|1|4|3"  capacityNode="0>4|35|1|7|3"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|1|5|7" fillWarningType="full"   />
+				<displayLine fillType="MINERAL_FEED"   fillWarningNode="0>4|35|1|5|6" fillWarningType="empty"  />
+				<displayLine fillType="SILAGE_ADDITIVE"  fillLevelNode="0>4|35|1|4|5"  capacityNode="0>4|35|1|7|5"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|1|5|11" fillWarningType="full"  />
+				<displayLine fillType="SILAGE_ADDITIVE"  fillWarningNode="0>4|35|1|5|10" fillWarningType="empty"  />
+
+				<displayLine headLineText="$l10n_1Produkt"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015"   headLineNode="0>4|35|1|6"          lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Bretter"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"  headLineNode="0>4|35|1|6|0"        lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Wolle" 	    font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"   headLineNode="0>4|35|1|6|1"   lineColor="1 1 1 1"  /> 
+				<displayLine headLineText="$l10n_1Leerpaletten"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"   headLineNode="0>4|35|1|6|2"  lineColor="1 1 1 1"  />              
+				<displayLine headLineText="$l10n_1Mineralfutter"   font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"  headLineNode="0>4|35|1|6|3" lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Silagezusatz"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"  headLineNode="0>4|35|1|6|5"   lineColor="1 1 1 1"  />                
+
+				<displayLine headLineText="$l10n_1Bestand" 	   font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015"       headLineNode="0>4|35|1|4"    lineColor="1 1 1 1"  />                
+				<displayLine headLineText="$l10n_1LagerKapazität" font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015"      headLineNode="0>4|35|1|7" lineColor="1 1 1 1"  />                
+				<displayLine headLineText="$l10n_1Lager Klein"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.02"  headLineNode="0>4|35|1|0"        lineColor="1 1 1 1"  />
+				<displayLine headLineText="_______________________________________________________________________________________________________________"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015"  headLineNode="0>4|35|1|9"   lineColor="1 1 1 1"  />
+
+				<displayLine headLineText="$l10n_1Auftrags Nr." font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015"  headLineNode="0>4|35|1|2"    lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 812445710"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|1|2|0" lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 812445711"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|1|2|1" lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 812445712"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|1|2|2" lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 812445713"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|1|2|3" lineColor="1 1 1 1"  />            
+				<displayLine headLineText="$l10n_1AB 812445715"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|1|2|5" lineColor="1 1 1 1"  />        
+                <displayLine headLineText="$l10n_1Datum"        font="GENERIC_BOLD"  lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|1|3"   lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD"  lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|1|3|0" lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD"  lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|1|3|1" lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD"  lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|1|3|2" lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD"  lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|1|3|3" lineColor="1 1 1 1"  />              
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD"  lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|1|3|5" lineColor="1 1 1 1"  />          
+
+			</display>            
+			<display rootNode="0>4|35" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine fillType="BUTTER"   fillLevelNode="0>4|35|2|4|0"  capacityNode="0>4|35|2|7|0"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|2|5|1" fillWarningType="full"   />
+				<displayLine fillType="BUTTER"  fillWarningNode="0>4|35|2|5|0" fillWarningType="empty"  />
+				<displayLine fillType="CHOCOLATE"     fillLevelNode="0>4|35|2|4|1"  capacityNode="0>4|35|2|7|1"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|2|5|3" fillWarningType="full"  />
+				<displayLine fillType="CHOCOLATE"    fillWarningNode="0>4|35|2|5|2" fillWarningType="empty"  />
+				<displayLine fillType="RAISINS" fillLevelNode="0>4|35|2|4|2"  capacityNode="0>4|35|2|7|2"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|2|5|5" fillWarningType="full"  />
+				<displayLine fillType="RAISINS" fillWarningNode="0>4|35|2|5|4" fillWarningType="empty"  />               
+				<displayLine fillType="TOMATO"   fillLevelNode="0>4|35|2|4|3"  capacityNode="0>4|35|2|7|3"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|2|5|7" fillWarningType="full"   />
+				<displayLine fillType="TOMATO"   fillWarningNode="0>4|35|2|5|6" fillWarningType="empty"  />
+				<displayLine fillType="LETTUCE"   fillLevelNode="0>4|35|2|4|4"  capacityNode="0>4|35|2|7|4"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|2|5|9" fillWarningType="full"  />
+				<displayLine fillType="LETTUCE"   fillWarningNode="0>4|35|2|5|8" fillWarningType="empty"  />
+				<displayLine fillType="STRAWBERRY"  fillLevelNode="0>4|35|2|4|5"  capacityNode="0>4|35|2|7|5"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|2|5|11" fillWarningType="full"  />
+				<displayLine fillType="STRAWBERRY"  fillWarningNode="0>4|35|2|5|10" fillWarningType="empty"  />
+
+				<displayLine headLineText="$l10n_1Produkt"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015"   headLineNode="0>4|35|2|6"     lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Butter"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"  headLineNode="0>4|35|2|6|0"     lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Schokolade" 	    font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"   headLineNode="0>4|35|2|6|1"   lineColor="1 1 1 1"  /> 
+				<displayLine headLineText="$l10n_1Rosinen"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"   headLineNode="0>4|35|2|6|2"   lineColor="1 1 1 1"  />              
+				<displayLine headLineText="$l10n_1Tomaten"   font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"  headLineNode="0>4|35|2|6|3" lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Salat" font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"  headLineNode="0>4|35|2|6|4" lineColor="1 1 1 1"  /> 
+				<displayLine headLineText="$l10n_1Erdbeeren"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"  headLineNode="0>4|35|2|6|5" lineColor="1 1 1 1"  />                
+
+				<displayLine headLineText="$l10n_1Bestand" 	   font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015"       headLineNode="0>4|35|2|4"  lineColor="1 1 1 1"  />                
+				<displayLine headLineText="$l10n_1LagerKapazität" font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015"      headLineNode="0>4|35|2|7" lineColor="1 1 1 1"  />                
+				<displayLine headLineText="$l10n_1Kühlhaus" 	            font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.02"  headLineNode="0>4|35|2|0"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="_______________________________________________________________________________________________________________"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015"  headLineNode="0>4|35|2|9"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Auftrags Nr." font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015"  headLineNode="0>4|35|2|2"   lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 812445719"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|2|2|0" lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 812445720"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|2|2|1" lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 812445721"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|2|2|2" lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 812445722"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|2|2|3" lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 812445723"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|2|2|4" lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 812445724"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|2|2|5" lineColor="1 1 1 1"  />        
+                <displayLine headLineText="$l10n_1Datum"        font="GENERIC_BOLD"  lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|2|3"   lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD"  lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|2|3|0" lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD"  lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|2|3|1" lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD"  lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|2|3|2" lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD"  lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|2|3|3" lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD"  lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|2|3|4" lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD"  lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|2|3|5" lineColor="1 1 1 1"  />          
+    
+			</display>            
+			<display rootNode="0>4|35" font="DIGIT" mask="000000000" size="0.1" scaleX="0.5" scaleY="0.5" color="0 0 1 1" hiddenColor="0.05 0.05 0.05 0" emissiveScale="1" titleAlignment="LEFT" fillLevelAlignment="RIGHT" capacityAlignment="RIGHT">
+				<displayLine fillType="BREAD"   fillLevelNode="0>4|35|3|4|0"  capacityNode="0>4|35|3|7|0"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|3|5|1" fillWarningType="full"   />
+				<displayLine fillType="BREAD"  fillWarningNode="0>4|35|3|5|0" fillWarningType="empty"  />
+				<displayLine fillType="EGG"     fillLevelNode="0>4|35|3|4|1"  capacityNode="0>4|35|3|7|1"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|3|5|3" fillWarningType="full"  />
+				<displayLine fillType="EGG"    fillWarningNode="0>4|35|3|5|2" fillWarningType="empty"  />
+				<displayLine fillType="CAKE" fillLevelNode="0>4|35|3|4|2"  capacityNode="0>4|35|3|7|2"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|3|5|5" fillWarningType="full"  />
+				<displayLine fillType="CAKE" fillWarningNode="0>4|35|3|5|4" fillWarningType="empty"  />               
+				<displayLine fillType="HONEY"   fillLevelNode="0>4|35|3|4|3"  capacityNode="0>4|35|3|7|3"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|3|5|7" fillWarningType="full"   />
+				<displayLine fillType="HONEY"   fillWarningNode="0>4|35|3|5|6" fillWarningType="empty"  />
+				<displayLine fillType="GRAPEJUICE"   fillLevelNode="0>4|35|3|4|4"  capacityNode="0>4|35|3|7|4"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|3|5|9" fillWarningType="full"  />
+				<displayLine fillType="GRAPEJUICE"   fillWarningNode="0>4|35|3|5|8" fillWarningType="empty"  />
+				<displayLine fillType="CHEESE"  fillLevelNode="0>4|35|3|4|5"  capacityNode="0>4|35|3|7|5"   font="GENERIC_BOLD" lineSize="0.03"   lineTitleAlignment="LEFT"    lineColor="1 1 1 1"   fillWarningNode="0>4|35|3|5|11" fillWarningType="full"  />
+				<displayLine fillType="CHEESE"  fillWarningNode="0>4|35|3|5|10" fillWarningType="empty"  />
+
+				<displayLine headLineText="$l10n_1Produkt"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015"   headLineNode="0>4|35|3|6"     lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Brot"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"  headLineNode="0>4|35|3|6|0"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Eier" 	    font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"   headLineNode="0>4|35|3|6|1"   lineColor="1 1 1 1"  /> 
+				<displayLine headLineText="$l10n_1Kuchen"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"   headLineNode="0>4|35|3|6|2"   lineColor="1 1 1 1"  />              
+				<displayLine headLineText="$l10n_1Honig"   font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"  headLineNode="0>4|35|3|6|3" lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Traubensaft" font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"  headLineNode="0>4|35|3|6|4" lineColor="1 1 1 1"  /> 
+				<displayLine headLineText="$l10n_1Käse"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.017"  headLineNode="0>4|35|3|6|5" lineColor="1 1 1 1"  />                
+
+				<displayLine headLineText="$l10n_1Bestand" 	   font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015"       headLineNode="0>4|35|3|4"  lineColor="1 1 1 1"  />                
+				<displayLine headLineText="$l10n_1LagerKapazität" font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015"      headLineNode="0>4|35|3|7" lineColor="1 1 1 1"  />                
+				<displayLine headLineText="$l10n_1Kühlhaus" 	            font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.02"  headLineNode="0>4|35|3|0"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="_______________________________________________________________________________________________________________"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015"  headLineNode="0>4|35|3|9"   lineColor="1 1 1 1"  />
+				<displayLine headLineText="$l10n_1Auftrags Nr." font="GENERIC_BOLD" lineTitleAlignment="CENTER"  lineSize="0.015"  headLineNode="0>4|35|3|2"   lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 812445728"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|3|2|0" lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 812445729"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|3|2|1" lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 812445730"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|3|2|2" lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 812445731"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|3|2|3" lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 812445732"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|3|2|4" lineColor="1 1 1 1"  />        
+				<displayLine headLineText="$l10n_1AB 812445733"  font="GENERIC_BOLD" lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|3|2|5" lineColor="1 1 1 1"  />        
+                <displayLine headLineText="$l10n_1Datum"        font="GENERIC_BOLD"  lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|3|3"   lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD"  lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|3|3|0" lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD"  lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|3|3|1" lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD"  lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|3|3|2" lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD"  lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|3|3|3" lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD"  lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|3|3|4" lineColor="1 1 1 1"  />          
+                <displayLine headLineText="$l10n_123.04.2023"   font="GENERIC_BOLD"  lineTitleAlignment="CENTER" lineSize="0.015" headLineNode="0>4|35|3|3|5" lineColor="1 1 1 1"  />          
+             
+			</display>            
+       </siloDisplays>
+    </silo>
+    <triggerMarkers>   
+        <triggerMarker node="markerUnloading"    filename="MarkerIcon_FactoryMODS/ProductionGoods_icons_FactoryMODS.xml"  id="UNLOAD"   adjustToGround="false"/>
+        <triggerMarker node="markerUnloading1"   filename="MarkerIcon_FactoryMODS/ProductionGoods_icons_FactoryMODS.xml"  id="UNLOAD1"  adjustToGround="false"/>  
+        <triggerMarker node="markerUnloading2"   filename="MarkerIcon_FactoryMODS/ProductionGoods_icons_FactoryMODS.xml"  id="UNLOAD2"  adjustToGround="false"/>
+        <triggerMarker node="markerUnloading3"   filename="MarkerIcon_FactoryMODS/ProductionGoods_icons_FactoryMODS.xml"  id="UNLOAD3"  adjustToGround="false"/>  
+        <triggerMarker node="markerUnloading4"   filename="MarkerIcon_FactoryMODS/ProductionGoods_icons_FactoryMODS.xml"  id="UNLOAD4"  adjustToGround="false"/>  
+        <triggerMarker node="markerUnloading5"   filename="MarkerIcon_FactoryMODS/ProductionGoods_icons_FactoryMODS.xml"  id="UNLOAD5"  adjustToGround="false"/>  
+        <triggerMarker node="markerUnloading6"   filename="MarkerIcon_FactoryMODS/ProductionGoods_icons_FactoryMODS.xml"  id="UNLOAD6"  adjustToGround="false"/>  
+        <triggerMarker node="markerUnloading7"   filename="MarkerIcon_FactoryMODS/ProductionGoods_icons_FactoryMODS.xml"  id="UNLOAD7"  adjustToGround="false"/> 
+        <triggerMarker node="markerUnloading8"   filename="MarkerIcon_FactoryMODS/ProductionGoods1_icons_FactoryMODS.xml" id="UNLOAD"   adjustToGround="false"/> 
+        <triggerMarker node="markerUnloading9"   filename="MarkerIcon_FactoryMODS/ProductionGoods1_icons_FactoryMODS.xml" id="UNLOAD2"  adjustToGround="false"/> 
+        <triggerMarker node="markerUnloading10"  filename="MarkerIcon_FactoryMODS/ProductionGoods1_icons_FactoryMODS.xml" id="UNLOAD3"  adjustToGround="false"/> 
+        <triggerMarker node="markerUnloading11"  filename="MarkerIcon_FactoryMODS/ProductionGoods1_icons_FactoryMODS.xml" id="UNLOAD4"  adjustToGround="false"/> 
+        <triggerMarker node="markerUnloading12"  filename="MarkerIcon_FactoryMODS/ProductionGoods1_icons_FactoryMODS.xml" id="UNLOAD5"  adjustToGround="false"/> 
+        <triggerMarker node="markerUnloading13"  filename="MarkerIcon_FactoryMODS/ProductionGoods1_icons_FactoryMODS.xml" id="UNLOAD6"  adjustToGround="false"/> 
+        <triggerMarker node="markerUnloading14"  filename="MarkerIcon_FactoryMODS/ProductionGoods1_icons_FactoryMODS.xml" id="UNLOAD7"  adjustToGround="false"/> 
+        <triggerMarker node="markerUnloading15"  filename="MarkerIcon_FactoryMODS/ProductionGoods1_icons_FactoryMODS.xml" id="UNLOAD1"  adjustToGround="false"/> 
+        <triggerMarker node="markerUnloading16"  filename="MarkerIcon_FactoryMODS/ProductionGoods2_icons_FactoryMODS.xml" id="UNLOAD"   adjustToGround="false"/> 
+        <triggerMarker node="markerUnloading17"  filename="MarkerIcon_FactoryMODS/ProductionGoods2_icons_FactoryMODS.xml" id="UNLOAD2"  adjustToGround="false"/> 
+        <triggerMarker node="markerUnloading18"  filename="MarkerIcon_FactoryMODS/ProductionGoods2_icons_FactoryMODS.xml" id="UNLOAD3"  adjustToGround="false"/>
+        <triggerMarker node="markerUnloading19"  filename="MarkerIcon_FactoryMODS/ProductionGoods2_icons_FactoryMODS.xml" id="UNLOAD4"  adjustToGround="false"/>
+        <triggerMarker node="markerUnloading20"  filename="MarkerIcon_FactoryMODS/ProductionGoods2_icons_FactoryMODS.xml" id="UNLOAD5"  adjustToGround="false"/>
+        <triggerMarker node="markerUnloading21"  filename="MarkerIcon_FactoryMODS/ProductionGoods2_icons_FactoryMODS.xml" id="UNLOAD6"  adjustToGround="false"/>
+        <triggerMarker node="markerUnloading22"  filename="MarkerIcon_FactoryMODS/ProductionGoods2_icons_FactoryMODS.xml" id="UNLOAD1"  adjustToGround="false"/>
+        <triggerMarker node="markerUnloading23"  filename="MarkerIcon_FactoryMODS/ProductionGoods2_icons_FactoryMODS.xml" id="UNLOAD7"  adjustToGround="false"/>
+        <triggerMarker node="triggerMarkerPc"    filename="MarkerIcon_FactoryMODS/Logistik_icons_FactoryMODS.xml"         id="PC"       adjustToGround="false"/>          
+        <triggerMarker node="markerUnloading24"  filename="MarkerIcon_FactoryMODS/Logistik_icons_FactoryMODS.xml"         id="UNLOAD1"  adjustToGround="false"/>          
+        <triggerMarker node="markerUnloading25"  filename="MarkerIcon_FactoryMODS/Logistik_icons_FactoryMODS.xml"         id="UNLOAD2"  adjustToGround="false"/>          
+        <triggerMarker node="markerUnloading26"  filename="MarkerIcon_FactoryMODS/Logistik_icons_FactoryMODS.xml"         id="UNLOAD3"  adjustToGround="false"/>          
+        <triggerMarker node="palletStripes"                                                                                              adjustToGround="false" />
+        <triggerMarker node="unloadingStripes"                                                                                           adjustToGround="false" />       
+    </triggerMarkers>
+ <!--  Animation Tore 1-13  -->
+    <animatedObjects>
+        <!--  Tor 1  -->
+        <animatedObject saveId="0>8|0" >
+            <animation duration="5">
+                <part node="0>8|0|0">
+                    <keyFrame time="0.0" translation="-9.824 -0.453 3.178"/>
+                    <keyFrame time="1.0" translation="-9.824 5.305 3.178"/>
+                </part>
+                <part node="0>8|0|4">
+                    <keyFrame time="0.0" translation="-9.897 1.784 3.23"/>
+                    <keyFrame time="0.77" translation="-9.897 6.252 3.23"/>
+                </part>
+                <part node="0>8|0|10">
+                    <keyFrame time="0.0" translation="-9.915 0.56 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 6.116 3.167"/>
+                </part>                
+                <part node="0>8|0|8">
+                    <keyFrame time="0.0" translation="-9.915 2.381 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 6.116 3.167"/>
+                </part>
+                <part node="0>8|0|9">
+                    <keyFrame time="0.0" translation="-9.915 4.096 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 6.116 3.167"/>
+                </part>
+                <shader node="0>8|0|0" parameterName="visibilityCutThreshold">
+                    <keyFrame time="0"   values="0 - - - " />
+                    <keyFrame time="0.2"   values="0.587 - - - " />
+                    <keyFrame time="0.4" values="0.587 - - - " />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.87" values="0.625 - - -" />
+                    <keyFrame time="1.0" values="0.65 - - -" />
+                </shader>
+                <part node="8|0|5|0">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.1" visibility="true" />
+                </part>	
+				<part node="8|0|5|1">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.6" visibility="false" />
+                </part>	
+                <part node="8|0|6|2">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.1" visibility="false" />
+                </part>	
+				<part node="8|0|6|1">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.6" visibility="true" />
+                </part>	    
+            </animation>
+            <controls triggerNode="0>8|0|2" posAction="ACTIVATE_HANDTOOL" posText="1openGate" negText="1closeGate" />
+            <sounds>
+                <moving template="slidingGateMetalLoop" linkNode="rollingDoorSound1"/>
+                <posEnd template="metalDoorsOpen" linkNode="rollingDoorSound1"/>
+                <negEnd template="slidingGateMetalClose" linkNode="rollingDoorSound1"/>
+            </sounds>
+        </animatedObject>
+        <!--  Tor 2  -->
+        <animatedObject saveId="0>8|1" >
+            <animation duration="5">
+                <part node="0>8|1|0">
+                    <keyFrame time="0.0" translation="-9.824 -0.145 3.178"/>
+                    <keyFrame time="1.0" translation="-9.824 5.305 3.178"/>
+                </part>
+                <part node="0>8|1|4">
+                    <keyFrame time="0.0" translation="-9.914 2.125 3.23"/>
+                    <keyFrame time="0.77" translation="-9.914 6.252 3.23"/>
+                </part>
+                 <part node="0>8|1|10">
+                    <keyFrame time="0.0" translation="-9.915 0.56 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 6.116 3.167"/>
+                </part>                
+                <part node="0>8|1|8">
+                    <keyFrame time="0.0" translation="-9.915 2.381 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 6.116 3.167"/>
+                </part>
+                <part node="0>8|1|9">
+                    <keyFrame time="0.0" translation="-9.915 4.096 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 6.116 3.167"/>
+                </part>               
+                <shader node="0>8|1|0" parameterName="visibilityCutThreshold">
+                    <keyFrame time="0"   values="0 - - - " />
+                    <keyFrame time="0.2"   values="0.587 - - - " />
+                    <keyFrame time="0.4" values="0.587 - - - " />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.87" values="0.625 - - -" />
+                    <keyFrame time="1.0" values="0.65 - - -" />
+                </shader>
+                <part node="0>8|1|5|0">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.1" visibility="true" />
+                </part>	
+				<part node="0>8|1|5|1">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.6" visibility="false" />
+                </part>	
+                <part node="8|1|6|2">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.1" visibility="false" />
+                </part>	
+				<part node="8|1|6|1">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.6" visibility="true" />
+                </part>	    
+            </animation>
+            <controls triggerNode="0>8|1|2" posAction="ACTIVATE_HANDTOOL" posText="openGate" negText="1closeGate" />
+            <sounds>
+                <moving template="slidingGateMetalLoop" linkNode="rollingDoorSound2"/>
+                <posEnd template="metalDoorsOpen" linkNode="rollingDoorSound2"/>
+                <negEnd template="slidingGateMetalClose" linkNode="rollingDoorSound2"/>
+            </sounds>
+        </animatedObject>
+        <!--  Tor 3  -->
+        <animatedObject saveId="0>8|2" >
+            <animation duration="5">
+                <part node="0>8|2|0">
+                    <keyFrame time="0.0" translation="-9.824 -0.145 3.178"/>
+                    <keyFrame time="1.0" translation="-9.824 5.305 3.178"/>
+                </part>
+                <part node="0>8|2|4">
+                    <keyFrame time="0.0" translation="-9.914 2.125 3.23"/>
+                    <keyFrame time="0.77" translation="-9.914 6.252 3.23"/>
+                </part>
+                 <part node="0>8|2|10">
+                    <keyFrame time="0.0" translation="-9.915 0.56 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 6.116 3.167"/>
+                </part>                
+                <part node="0>8|2|8">
+                    <keyFrame time="0.0" translation="-9.915 2.381 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 6.116 3.167"/>
+                </part>
+                <part node="0>8|2|9">
+                    <keyFrame time="0.0" translation="-9.915 4.096 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 6.116 3.167"/>
+                </part>               
+                <shader node="0>8|2|0" parameterName="visibilityCutThreshold">
+                    <keyFrame time="0"   values="0 - - - " />
+                    <keyFrame time="0.2"   values="0.587 - - - " />
+                    <keyFrame time="0.4" values="0.587 - - - " />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.87" values="0.625 - - -" />
+                    <keyFrame time="1.0" values="0.65 - - -" />
+                </shader>
+                <part node="0>8|2|5|0">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.1" visibility="true" />
+                </part>	
+				<part node="0>8|2|5|1">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.6" visibility="false" />
+                </part>
+                <part node="8|2|6|2">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.1" visibility="false" />
+                </part>	
+				<part node="8|2|6|1">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.6" visibility="true" />
+                </part>		    
+            </animation>
+            <controls triggerNode="0>8|2|2" posAction="ACTIVATE_HANDTOOL" posText="1openGate" negText="1closeGate" />
+            <sounds>
+                <moving template="slidingGateMetalLoop" linkNode="rollingDoorSound3"/>
+                <posEnd template="metalDoorsOpen" linkNode="rollingDoorSound3"/>
+                <negEnd template="slidingGateMetalClose" linkNode="rollingDoorSound3"/>
+            </sounds>
+        </animatedObject>
+        <!--  Tor 4  -->
+        <animatedObject saveId="0>8|3" >
+            <animation duration="5">
+                <part node="0>8|3|0">
+                    <keyFrame time="0.0" translation="-9.824 -0.145 3.178"/>
+                    <keyFrame time="1.0" translation="-9.824 5.305 3.178"/>
+                </part>
+                <part node="0>8|3|4">
+                    <keyFrame time="0.0" translation="-9.914 2.125 3.23"/>
+                    <keyFrame time="0.77" translation="-9.914 6.252 3.23"/>
+                </part>
+                 <part node="0>8|3|10">
+                    <keyFrame time="0.0" translation="-9.915 0.56 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 6.116 3.167"/>
+                </part>                
+                <part node="0>8|3|8">
+                    <keyFrame time="0.0" translation="-9.915 2.381 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 6.116 3.167"/>
+                </part>
+                <part node="0>8|3|9">
+                    <keyFrame time="0.0" translation="-9.915 4.096 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 6.116 3.167"/>
+                </part>               
+                <shader node="0>8|3|0" parameterName="visibilityCutThreshold">
+                    <keyFrame time="0"   values="0 - - - " />
+                    <keyFrame time="0.2"   values="0.587 - - - " />
+                    <keyFrame time="0.4" values="0.587 - - - " />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.87" values="0.625 - - -" />
+                    <keyFrame time="1.0" values="0.65 - - -" />
+                </shader>
+                <part node="0>8|3|5|0">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.1" visibility="true" />
+                </part>	
+				<part node="0>8|3|5|1">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.6" visibility="false" />
+                </part>
+                 <part node="8|3|6|2">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.1" visibility="false" />
+                </part>	
+				<part node="8|3|6|1">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.6" visibility="true" />
+                </part>	               	    
+            </animation>
+            <controls triggerNode="0>8|3|2" posAction="ACTIVATE_HANDTOOL" posText="1openGate" negText="1closeGate" />
+            <sounds>
+                <moving template="slidingGateMetalLoop" linkNode="rollingDoorSound4"/>
+                <posEnd template="metalDoorsOpen" linkNode="rollingDoorSound4"/>
+                <negEnd template="slidingGateMetalClose" linkNode="rollingDoorSound4"/>
+            </sounds>
+        </animatedObject>
+        <!--  Tor 5  -->
+        <animatedObject saveId="0>8|4" >
+            <animation duration="5">
+                <part node="0>8|4|0">
+                    <keyFrame time="0.0" translation="-9.824 -0.145 3.178"/>
+                    <keyFrame time="1.0" translation="-9.824 5.305 3.178"/>
+                </part>
+                <part node="0>8|4|4">
+                    <keyFrame time="0.0" translation="-9.914 2.125 3.23"/>
+                    <keyFrame time="0.77" translation="-9.914 6.252 3.23"/>
+                </part>
+                 <part node="0>8|4|10">
+                    <keyFrame time="0.0" translation="-9.915 0.56 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 6.116 3.167"/>
+                </part>                
+                <part node="0>8|4|8">
+                    <keyFrame time="0.0" translation="-9.915 2.381 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 6.116 3.167"/>
+                </part>
+                <part node="0>8|4|9">
+                    <keyFrame time="0.0" translation="-9.915 4.096 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 6.116 3.167"/>
+                </part>               
+                <shader node="0>8|4|0" parameterName="visibilityCutThreshold">
+                    <keyFrame time="0"   values="0 - - - " />
+                    <keyFrame time="0.2"   values="0.587 - - - " />
+                    <keyFrame time="0.4" values="0.587 - - - " />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.87" values="0.625 - - -" />
+                    <keyFrame time="1.0" values="0.65 - - -" />
+                </shader>
+                <part node="0>8|4|5|0">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.1" visibility="true" />
+                </part>	
+				<part node="0>8|4|5|1">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.6" visibility="false" />
+                </part>
+                 <part node="8|4|6|2">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.1" visibility="false" />
+                </part>	
+				<part node="8|4|6|1">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.6" visibility="true" />
+                </part>	               	    
+            </animation>
+            <controls triggerNode="0>8|4|2" posAction="ACTIVATE_HANDTOOL" posText="1openGate" negText="1closeGate" />
+            <sounds>
+                <moving template="slidingGateMetalLoop" linkNode="rollingDoorSound5"/>
+                <posEnd template="metalDoorsOpen" linkNode="rollingDoorSound5"/>
+                <negEnd template="slidingGateMetalClose" linkNode="rollingDoorSound5"/>
+            </sounds>
+        </animatedObject>
+        <!--  Tor 6  --> 
+        <animatedObject saveId="0>8|5" >
+            <animation duration="5">
+                <part node="0>8|5|0">
+                    <keyFrame time="0.0" translation="-9.81 -0.133 3.178"/>
+                    <keyFrame time="1.0" translation="-9.81 5.305 3.178"/>
+                </part>
+                <part node="0>8|5|4">
+                    <keyFrame time="0.0" translation="-9.897 2.125 3.23"/>
+                    <keyFrame time="0.77" translation="-9.897 6.252 3.23"/>
+                </part>
+                 <part node="0>8|5|10">
+                    <keyFrame time="0.0" translation="-9.915 0.833 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 5.871 3.167"/>
+                </part>                
+                <part node="0>8|5|8">
+                    <keyFrame time="0.0" translation="-9.915 4.697 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 5.871 3.167"/>
+                </part>
+                <part node="0>8|5|9">
+                    <keyFrame time="0.0" translation="-9.915 2.82 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 5.871 3.167"/>
+                </part>                 
+                <shader node="0>8|5|0" parameterName="visibilityCutThreshold">
+                    <keyFrame time="0"   values="0 - - - " />
+                    <keyFrame time="0.2"   values="0.587 - - - " />
+                    <keyFrame time="0.4" values="0.587 - - - " />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.87" values="0.625 - - -" />
+                    <keyFrame time="1.0" values="0.65 - - -" />
+                </shader>
+                <part node="0>8|5|5|1">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.1" visibility="true" />
+                </part>	
+				<part node="0>8|5|5|2">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.6" visibility="false" />
+                </part>
+                 <part node="8|5|6|2">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.1" visibility="false" />
+                </part>	
+				<part node="8|5|6|1">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.6" visibility="true" />
+                </part>	               	    
+            </animation>
+            <controls triggerNode="0>8|5|2" posAction="ACTIVATE_HANDTOOL" posText="1openGate" negText="1closeGate" />
+            <sounds>
+                <moving template="slidingGateMetalLoop" linkNode="rollingDoorSound6"/>
+                <posEnd template="metalDoorsOpen" linkNode="rollingDoorSound6"/>
+                <negEnd template="slidingGateMetalClose" linkNode="rollingDoorSound6"/>
+            </sounds>
+        </animatedObject>
+        <!--  Tor 7  -->
+        <animatedObject saveId="0>8|6" >
+            <animation duration="5">
+                <part node="0>8|6|0">
+                    <keyFrame time="0.0" translation="-9.81 1.01 3.178"/>
+                    <keyFrame time="1.0" translation="-9.81 5.022 3.178"/>
+                </part>
+                <part node="0>8|6|4">
+                    <keyFrame time="0.0" translation="-9.897 2.906 3.23"/>
+                    <keyFrame time="0.87" translation="-9.897 6.16 3.23"/>
+                </part>
+                  <part node="0>8|6|10">
+                    <keyFrame time="0.0" translation="-9.915 1.665 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 5.61 3.167"/>
+                </part>                
+                <part node="0>8|6|8">
+                    <keyFrame time="0.0" translation="-9.915 4.341 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 5.61 3.167"/>
+                </part>
+                <part node="0>8|6|9">
+                    <keyFrame time="0.0" translation="-9.915 2.926 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 5.61 3.167"/>
+                </part>                
+                <shader node="0>8|6|0" parameterName="visibilityCutThreshold">
+                    <keyFrame time="0"   values="0 - - - " />
+                    <keyFrame time="0.2"   values="0.587 - - - " />
+                    <keyFrame time="0.4" values="0.587 - - - " />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.87" values="0.625 - - -" />
+                    <keyFrame time="1.0" values="0.65 - - -" />
+                </shader>
+                <part node="0>8|6|5|1">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.1" visibility="true" />
+                </part>	
+				<part node="0>8|6|5|2">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.6" visibility="false" />
+                </part>
+                 <part node="8|6|6|2">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.1" visibility="false" />
+                </part>	
+				<part node="8|6|6|1">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.6" visibility="true" />
+                </part>	               	    
+            </animation>
+            <controls triggerNode="0>8|6|2" posAction="ACTIVATE_HANDTOOL" posText="1openGate" negText="1closeGate" />
+            <sounds>
+                <moving template="slidingGateMetalLoop" linkNode="rollingDoorSound7"/>
+                <posEnd template="metalDoorsOpen" linkNode="rollingDoorSound7"/>
+                <negEnd template="slidingGateMetalClose" linkNode="rollingDoorSound7"/>
+            </sounds>
+        </animatedObject>
+        <!--  Tor 8  -->
+        <animatedObject saveId="0>8|7" >
+            <animation duration="5">
+                <part node="0>8|7|0">
+                    <keyFrame time="0.0" translation="-9.81 1.01 3.178"/>
+                    <keyFrame time="1.0" translation="-9.81 5.022 3.178"/>
+                </part>
+                <part node="0>8|7|4">
+                    <keyFrame time="0.0" translation="-9.897 2.906 3.23"/>
+                    <keyFrame time="0.87" translation="-9.897 6.16 3.23"/>
+                </part>
+                 <part node="0>8|7|9">
+                    <keyFrame time="0.0" translation="-9.915 1.665 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 5.61 3.167"/>
+                </part>                
+                <part node="0>8|7|7">
+                    <keyFrame time="0.0" translation="-9.915 4.341 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 5.61 3.167"/>
+                </part>
+                <part node="0>8|7|8">
+                    <keyFrame time="0.0" translation="-9.915 2.926 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 5.61 3.167"/>
+                </part> 
+                <shader node="0>8|7|0" parameterName="visibilityCutThreshold">
+                    <keyFrame time="0"   values="0 - - - " />
+                    <keyFrame time="0.2"   values="0.587 - - - " />
+                    <keyFrame time="0.4" values="0.587 - - - " />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.87" values="0.625 - - -" />
+                    <keyFrame time="1.0" values="0.65 - - -" />
+                </shader>
+                <part node="0>8|7|5|1">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.1" visibility="true" />
+                </part>	
+				<part node="0>8|7|5|2">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.6" visibility="false" />
+                </part>             	    
+            </animation>
+            <controls triggerNode="0>8|7|2" posAction="ACTIVATE_HANDTOOL" posText="1openGate" negText="1closeGate" />
+            <sounds>
+                <moving template="slidingGateMetalLoop" linkNode="rollingDoorSound8"/>
+                <posEnd template="metalDoorsOpen" linkNode="rollingDoorSound8"/>
+                <negEnd template="slidingGateMetalClose" linkNode="rollingDoorSound8"/>
+            </sounds>
+        </animatedObject>
+        <!--  Tor 9  -->
+         <animatedObject saveId="0>8|8" >
+            <animation duration="5">
+                <part node="0>8|8|0">
+                    <keyFrame time="0.0" translation="-9.81 1.01 3.178"/>
+                    <keyFrame time="1.0" translation="-9.81 5.022 3.178"/>
+                </part>
+                <part node="0>8|8|4">
+                    <keyFrame time="0.0" translation="-9.897 2.906 3.23"/>
+                    <keyFrame time="0.87" translation="-9.897 6.16 3.23"/>
+                </part>
+                 <part node="0>8|8|9">
+                    <keyFrame time="0.0" translation="-9.915 1.665 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 5.61 3.167"/>
+                </part>                
+                <part node="0>8|8|7">
+                    <keyFrame time="0.0" translation="-9.915 4.341 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 5.61 3.167"/>
+                </part>
+                <part node="0>8|8|8">
+                    <keyFrame time="0.0" translation="-9.915 2.926 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 5.61 3.167"/>
+                </part>                 
+                <shader node="0>8|8|0" parameterName="visibilityCutThreshold">
+                    <keyFrame time="0"   values="0 - - - " />
+                    <keyFrame time="0.2"   values="0.587 - - - " />
+                    <keyFrame time="0.4" values="0.587 - - - " />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.87" values="0.625 - - -" />
+                    <keyFrame time="1.0" values="0.65 - - -" />
+                </shader>
+                <part node="0>8|8|5|1">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.1" visibility="true" />
+                </part>	
+				<part node="0>8|8|5|2">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.6" visibility="false" />
+                </part>               	    
+            </animation>
+            <controls triggerNode="0>8|8|2" posAction="ACTIVATE_HANDTOOL" posText="1openGate" negText="1closeGate" />
+            <sounds>
+                <moving template="slidingGateMetalLoop" linkNode="rollingDoorSound9"/>
+                <posEnd template="metalDoorsOpen" linkNode="rollingDoorSound9"/>
+                <negEnd template="slidingGateMetalClose" linkNode="rollingDoorSound9"/>
+            </sounds>
+        </animatedObject>
+        <!--  Tor 10  -->
+         <animatedObject saveId="0>8|9" >
+            <animation duration="5">
+                <part node="0>8|9|0">
+                    <keyFrame time="0.0" translation="-9.81 -0.216 3.178"/>
+                    <keyFrame time="1.0" translation="-9.81 5.019 3.178"/>
+                </part>
+                <part node="0>8|9|4">
+                    <keyFrame time="0.0" translation="-9.88 2.124 3.23"/>
+                    <keyFrame time="0.77" translation="-9.88 5.931 3.23"/>
+                </part>
+                <part node="0>8|9|10">
+                    <keyFrame time="0.0" translation="-9.915 1.665 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 5.61 3.167"/>
+                </part>                
+                <part node="0>8|9|8">
+                    <keyFrame time="0.0" translation="-9.915 4.341 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 5.61 3.167"/>
+                </part>
+                <part node="0>8|9|9">
+                    <keyFrame time="0.0" translation="-9.915 2.926 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 5.61 3.167"/>
+                </part> 
+                <shader node="0>8|9|0" parameterName="visibilityCutThreshold">
+                    <keyFrame time="0"   values="0 - - - " />
+                    <keyFrame time="0.2"   values="0.587 - - - " />
+                    <keyFrame time="0.4" values="0.587 - - - " />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.87" values="0.625 - - -" />
+                    <keyFrame time="1.0" values="0.65 - - -" />
+                </shader>
+                <part node="0>8|9|5|1">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.1" visibility="true" />
+                </part>	
+				<part node="0>8|9|5|2">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.6" visibility="false" />
+                </part>
+                 <part node="8|9|6|2">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.1" visibility="false" />
+                </part>	
+				<part node="8|9|6|1">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.6" visibility="true" />
+                </part>	               	    
+            </animation>
+            <controls triggerNode="0>8|9|2" posAction="ACTIVATE_HANDTOOL" posText="1openGate" negText="1closeGate" />
+            <sounds>
+                <moving template="slidingGateMetalLoop" linkNode="rollingDoorSound10"/>
+                <posEnd template="metalDoorsOpen" linkNode="rollingDoorSound10"/>
+                <negEnd template="slidingGateMetalClose" linkNode="rollingDoorSound10"/>
+            </sounds>
+        </animatedObject>        
+        <!--  Tor 11  -->
+         <animatedObject saveId="0>8|10" >
+            <animation duration="5">
+                <part node="0>8|10|0">
+                    <keyFrame time="0.0" translation="-9.81 1.01 3.178"/>
+                    <keyFrame time="1.0" translation="-9.81 5.022 3.178"/>
+                </part>
+                <part node="0>8|10|4">
+                    <keyFrame time="0.0" translation="-9.897 2.906 3.23"/>
+                    <keyFrame time="0.87" translation="-9.897 6.16 3.23"/>
+                </part>
+                  <part node="0>8|10|10">
+                    <keyFrame time="0.0" translation="-9.915 1.665 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 5.61 3.167"/>
+                </part>                
+                <part node="0>8|10|8">
+                    <keyFrame time="0.0" translation="-9.915 4.341 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 5.61 3.167"/>
+                </part>
+                <part node="0>8|10|9">
+                    <keyFrame time="0.0" translation="-9.915 2.926 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 5.61 3.167"/>
+                </part>                  
+                <shader node="0>8|10|0" parameterName="visibilityCutThreshold">
+                    <keyFrame time="0"   values="0 - - - " />
+                    <keyFrame time="0.2"   values="0.587 - - - " />
+                    <keyFrame time="0.4" values="0.587 - - - " />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.87" values="0.625 - - -" />
+                    <keyFrame time="1.0" values="0.65 - - -" />
+                </shader>
+                <part node="0>8|10|5|0">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.1" visibility="true" />
+                </part>	
+				<part node="0>8|10|5|1">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.6" visibility="false" />
+                </part>
+                 <part node="8|10|6|2">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.1" visibility="false" />
+                </part>	
+				<part node="8|10|6|1">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.6" visibility="true" />
+                </part>	               	    
+            </animation>
+            <controls triggerNode="0>8|10|2" posAction="ACTIVATE_HANDTOOL" posText="1openGate" negText="1closeGate" />
+            <sounds>
+                <moving template="slidingGateMetalLoop" linkNode="rollingDoorSound11"/>
+                <posEnd template="metalDoorsOpen" linkNode="rollingDoorSound11"/>
+                <negEnd template="slidingGateMetalClose" linkNode="rollingDoorSound11"/>
+            </sounds>
+        </animatedObject>
+
+        <!--  Tor 12  -->
+         <animatedObject saveId="0>8|11" >
+            <animation duration="5">
+                <part node="0>8|11|0">
+                    <keyFrame time="0.0" translation="-9.81 1.01 3.178"/>
+                    <keyFrame time="1.0" translation="-9.81 5.022 3.178"/>
+                </part>
+                <part node="0>8|11|4">
+                    <keyFrame time="0.0" translation="-9.897 2.906 3.23"/>
+                    <keyFrame time="0.87" translation="-9.897 6.16 3.23"/>
+                </part>
+                  <part node="0>8|11|10">
+                    <keyFrame time="0.0" translation="-9.915 1.665 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 5.61 3.167"/>
+                </part>                
+                <part node="0>8|11|8">
+                    <keyFrame time="0.0" translation="-9.915 4.341 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 5.61 3.167"/>
+                </part>
+                <part node="0>8|11|9">
+                    <keyFrame time="0.0" translation="-9.915 2.926 3.167"/>
+                    <keyFrame time="0.8" translation="-9.915 5.61 3.167"/>
+                </part>                  
+                <shader node="0>8|11|0" parameterName="visibilityCutThreshold">
+                    <keyFrame time="0"   values="0 - - - " />
+                    <keyFrame time="0.2"   values="0.587 - - - " />
+                    <keyFrame time="0.4" values="0.587 - - - " />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.67" values="0.606 - - -" />
+                    <keyFrame time="0.87" values="0.625 - - -" />
+                    <keyFrame time="1.0" values="0.65 - - -" />
+                </shader>
+                <part node="0>8|11|5|0">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.1" visibility="true" />
+                </part>	
+				<part node="0>8|11|5|1">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.6" visibility="false" />
+                </part>
+                 <part node="8|11|6|2">
+					<keyFrame time="0.0" visibility="true" />
+					<keyFrame time="0.1" visibility="false" />
+                </part>	
+				<part node="8|11|6|1">
+					<keyFrame time="0.0" visibility="false" />
+					<keyFrame time="0.6" visibility="true" />
+                </part>	               	    
+            </animation>
+            <controls triggerNode="0>8|11|2" posAction="ACTIVATE_HANDTOOL" posText="1openGate" negText="1closeGate" />
+            <sounds>
+                <moving template="slidingGateMetalLoop" linkNode="rollingDoorSound12"/>
+                <posEnd template="metalDoorsOpen" linkNode="rollingDoorSound12"/>
+                <negEnd template="slidingGateMetalClose" linkNode="rollingDoorSound12"/>
+            </sounds>
+        </animatedObject>
+        <!--  Tür 1   -->
+          <animatedObject saveId="0>8|12" >
+           <animation duration="3.0">
+                <part node="8|12|0">
+                    <keyFrame time="0.0" rotaton="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 120 0"/>
+                </part>               	                                                                                      
+            </animation>
+            <controls triggerNode="8|12|1" posAction="ACTIVATE_HANDTOOL" posText="1openDoor" negText="1closeDoor" />
+        </animatedObject>
+        <!--  Tür 2   -->
+          <animatedObject saveId="0>8|13" >
+           <animation duration="3.0">
+                <part node="8|13|0">
+                    <keyFrame time="0.0" rotaton="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 120 0"/>
+                </part>               	                                                                                      
+            </animation>
+            <controls triggerNode="8|13|1" posAction="ACTIVATE_HANDTOOL" posText="1openDoor" negText="1closeDoor" />
+        </animatedObject>
+                <!--  Licht Umschlaghalle   -->
+                <animatedObject saveId="lichtUmschlagHalle" >
+                    <animation duration="1.0">
+                        <part node="0>16|0|10">
+                            <keyFrame time="0.0" visibility="false" />
+                            <keyFrame time="1.0" visibility="true" />
+                        </part> 
+                          <part node="16|0|8|1">
+                            <keyFrame time="0.0" visibility="false" />
+                            <keyFrame time="1.0" visibility="true" />
+                        </part> 
+                        <part node="16|0|8|2">
+                            <keyFrame time="0.0" visibility="true" />
+                            <keyFrame time="1.0" visibility="false" />
+                        </part>                                                                                                                                                                                                         
+                    </animation>
+                    <controls triggerNode="16|0|9" posAction="ACTIVATE_HANDTOOL" posText="1Light ON" negText="1Light OFF" />          
+                    <sounds>
+                        <posEnd template="lizardFloodLight" innerRadius="50" outerRadius="100" volumeScale="0.2"/>
+                    </sounds>
+                </animatedObject>      
+                <!--  Licht Kleine Halle   -->      
+                <animatedObject saveId="lichtUmschlagHalle" >
+                    <animation duration="1.0">
+                        <part node="0>16|1|8">
+                            <keyFrame time="0.0" visibility="false" />
+                            <keyFrame time="1.0" visibility="true" />
+                        </part>                
+                          <part node="16|1|6|2">
+                            <keyFrame time="0.0" visibility="true" />
+                            <keyFrame time="1.0" visibility="false" />
+                        </part> 
+                        <part node="16|1|6|1">
+                            <keyFrame time="0.0" visibility="false" />
+                            <keyFrame time="1.0" visibility="true" />
+                        </part>                                                                                                                                                                                                        
+                    </animation>
+                    <controls triggerNode="16|1|7" posAction="ACTIVATE_HANDTOOL" posText="1Light ON" negText="1Light OFF" />          
+                    <sounds>
+                        <posEnd template="lizardFloodLight" innerRadius="50" outerRadius="100" volumeScale="0.2"/>
+                    </sounds>
+                </animatedObject>     
+                <!--  Licht Hauptlagerhalle   -->
+                <animatedObject saveId="lichtUmschlagHalle" >
+                    <animation duration="1.0">
+                        <part node="0>16|2|6">
+                            <keyFrame time="0.0" visibility="false" />
+                            <keyFrame time="1.0" visibility="true" />
+                        </part>                 
+                          <part node="16|2|4|2">
+                            <keyFrame time="0.0" visibility="true" />
+                            <keyFrame time="1.0" visibility="false" />
+                        </part> 
+                        <part node="16|2|4|1">
+                            <keyFrame time="0.0" visibility="false" />
+                            <keyFrame time="1.0" visibility="true" />
+                        </part>                                                                                                                                                                                                        
+                    </animation>
+                    <controls triggerNode="16|2|5" posAction="ACTIVATE_HANDTOOL" posText="1Light ON" negText="1Light OFF" />          
+                    <sounds>
+                        <posEnd template="lizardFloodLight" innerRadius="50" outerRadius="100" volumeScale="0.2"/>
+                    </sounds>
+                </animatedObject>       
+                <!--  Licht Kühllager   -->
+                <animatedObject saveId="lichtUmschlagHalle" >
+                    <animation duration="1.0">
+                        <part node="0>16|3|6">
+                            <keyFrame time="0.0" visibility="false" />
+                            <keyFrame time="1.0" visibility="true" />
+                        </part>                  
+                          <part node="16|3|4|2">
+                            <keyFrame time="0.0" visibility="true" />
+                            <keyFrame time="1.0" visibility="false" />
+                        </part> 
+                        <part node="16|3|4|1">
+                            <keyFrame time="0.0" visibility="false" />
+                            <keyFrame time="1.0" visibility="true" />
+                        </part>                                                                                                                                                                                                        
+                    </animation>
+                    <controls triggerNode="16|3|5" posAction="ACTIVATE_HANDTOOL" posText="1Light ON" negText="1Light OFF" />          
+                    <sounds>
+                        <posEnd template="lizardFloodLight" innerRadius="50" outerRadius="100" volumeScale="0.2"/>
+                    </sounds>
+                </animatedObject>      
+                <!--  Licht Büro   -->
+                <animatedObject saveId="lichtUmschlagHalle" >
+                    <animation duration="1.0">
+                         <part node="0>16|4|6">
+                            <keyFrame time="0.0" visibility="false" />
+                            <keyFrame time="1.0" visibility="true" />
+                        </part>                  
+                          <part node="16|4|4|2">
+                            <keyFrame time="0.0" visibility="true" />
+                            <keyFrame time="1.0" visibility="false" />
+                        </part> 
+                        <part node="16|4|4|1">
+                            <keyFrame time="0.0" visibility="false" />
+                            <keyFrame time="1.0" visibility="true" />
+                        </part>                                                                                                                                                                                                        
+                    </animation>
+                    <controls triggerNode="16|4|5" posAction="ACTIVATE_HANDTOOL" posText="1Light ON" negText="1Light OFF" />          
+                    <sounds>
+                        <posEnd template="lizardFloodLight" innerRadius="50" outerRadius="100" volumeScale="0.2"/>
+                    </sounds>
+                </animatedObject>
+    </animatedObjects>
+    <lights>
+        <sharedLight filename="$data/shared/assets/lights/terraLed/spotlight20W.xml" linkNode="lightNode1" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="44.052 0 0" />
+        </sharedLight>
+        <sharedLight filename="$data/shared/assets/lights/terraLed/spotlight20W.xml" linkNode="lightNode2" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="44.052 0 0" />
+        </sharedLight>
+        <sharedLight filename="$data/shared/assets/lights/terraLed/spotlight20W.xml" linkNode="lightNode3" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="44.052 0 0" />
+        </sharedLight>
+        <sharedLight filename="$data/shared/assets/lights/terraLed/spotlight20W.xml" linkNode="lightNode4" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="44.052 0 0" />
+        </sharedLight>
+        <sharedLight filename="$data/shared/assets/lights/terraLed/spotlight20W.xml" linkNode="lightNode5" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="44.052 0 0" />
+        </sharedLight> 
+         <sharedLight filename="$data/shared/assets/lights/terraLed/spotlight20W.xml" linkNode="lightNode6" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="44.052 0 0" />
+        </sharedLight>
+        <sharedLight filename="$data/shared/assets/lights/terraLed/spotlight20W.xml" linkNode="lightNode7" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="44.052 0 0" />
+        </sharedLight>                
+        <realLights>
+            <low>
+                <light node="realLightsLow" groupIndex="1"/>
+            </low>
+            <high>
+                <light node="realLightsHigh" groupIndex="1"/>
+            </high>  
+        </realLights>
+         <group  activateTime="19:00" deactivateTime="07:00">
+            <sounds>
+                <toggle template="lizardFloodLight" innerRadius="50" outerRadius="100" volumeScale="0.2"/>
+            </sounds>
+        </group>              
+    </lights>
+    <colorable>
+        <colors>
+            <color value="1 1 1" />
+            <color value="0.3 0 0" />
+            <color value="0 0.052 0" />
+            <color value="0.25 0.25 0.25" />
+            <color value="0 0 0" />  
+            <color value="RUDOLFHOERMANN_GREEN" />
+            <color value="RUDOLFHOERMANN_BEIGE" />
+            <color value="RUDOLFHOERMANN_RED" />
+            <color value="RUDOLFHOERMANN_BLUE" />
+            <color value="RUDOLFHOERMANN_DARKGREY" />
+            <color value="RUDOLFHOERMANN_LIGHTGREY" />
+            <color value="RUDOLFHOERMANN_WHITEALU" />
+            <color value="RUDOLFHOERMANN_GREYALU" />
+            <color value="RUDOLFHOERMANN_OXIDRED" />
+            <color value="RUDOLFHOERMANN_WOODDARK" />
+            <color value="RUDOLFHOERMANN_WOODBRIGHT" />
+            <color value="RUDOLFHOERMANN_LIGHTGREEN" />
+            <color value="RUDOLFHOERMANN_BROWN" />
+            <color value="RUDOLFHOERMANN_DARKBEIGE" />                                
+        </colors>
+        <nodes>
+            <node node="0>0" />
+        </nodes>
+    </colorable> 
+<i3dMappings>
+  <i3dMapping id="storage" node="0>13" />
+  <i3dMapping id="fillPlane_oliveOil" node="0>2|1" />
+  <i3dMapping id="fillPlane_sunflowerOil" node="0>2|2" />
+  <i3dMapping id="fillPlane_canolaOil" node="0>2|3" /> 
+  <i3dMapping id="fillPlane_emptypallet1" node="0>2|4" />
+  <i3dMapping id="fillPlane_Floor" node="0>2|5" /> 
+  <i3dMapping id="fillPlane_sugar" node="0>2|6" /> 
+  <i3dMapping id="fillPlane_cereals" node="0>2|7" /> 
+  <i3dMapping id="fillPlane_furnitureStacks" node="0>2|8" /> 
+  <i3dMapping id="fillPlane_clothes" node="0>2|9" /> 
+  <i3dMapping id="fillPlane_fabrics" node="0>2|10" /> 
+  <i3dMapping id="fillPlane_butter" node="0>2|11" /> 
+  <i3dMapping id="fillPlane_chocolate" node="0>2|12" /> 
+  <i3dMapping id="fillPlane_raisin" node="0>2|13" /> 
+  <i3dMapping id="fillPlane_strawberry" node="0>2|14" /> 
+  <i3dMapping id="fillPlane_lettuce" node="0>2|15" /> 
+  <i3dMapping id="fillPlane_tomato" node="0>2|16" /> 
+  <i3dMapping id="fillPlane_bread" node="0>2|17" />
+  <i3dMapping id="fillPlane_egg" node="0>2|19" />
+  <i3dMapping id="fillPlane_cake" node="0>2|18" />
+  <i3dMapping id="fillPlane_honey" node="0>2|20" />
+  <i3dMapping id="fillPlane_grapejuice" node="0>2|21" /> 
+  <i3dMapping id="fillPlane_cheese" node="0>2|22" />
+  <i3dMapping id="fillPlane_boards" node="0>2|23" />
+  <i3dMapping id="fillPlane_wool" node="0>2|24" />
+  <i3dMapping id="fillPlane_MINERAL_FEED" node="0>2|25" />
+
+  <i3dMapping id="fillPlane_SILAGE_ADDITIVE" node="0>2|27" />
+
+    <i3dMapping id="exactFillRootNode" node="0>3|0" />
+    <i3dMapping id="exactFillRootNode1" node="0>3|1" /> 
+    <i3dMapping id="exactFillRootNode2" node="0>3|2" />
+    <i3dMapping id="exactFillRootNode4" node="0>3|4" />
+    <i3dMapping id="exactFillRootNode5" node="0>3|5" />  
+    <i3dMapping id="exactFillRootNode6" node="0>3|6" />  
+    <i3dMapping id="exactFillRootNode7" node="0>3|7" />
+    <i3dMapping id="exactFillRootNode8" node="0>3|8" />
+    <i3dMapping id="exactFillRootNode9" node="0>3|9" />                    
+    <i3dMapping id="exactFillRootNode10" node="0>3|10" /> 
+    <i3dMapping id="exactFillRootNode11" node="0>3|11" />
+    <i3dMapping id="exactFillRootNode12" node="0>3|12" />
+    <i3dMapping id="exactFillRootNode13" node="0>3|13" />
+    <i3dMapping id="exactFillRootNode14" node="0>3|14" />
+    <i3dMapping id="exactFillRootNode15" node="0>3|15" />
+    <i3dMapping id="exactFillRootNode16" node="0>3|16" />
+    <i3dMapping id="exactFillRootNode17" node="0>3|17" />
+    <i3dMapping id="exactFillRootNode18" node="0>3|18" />
+    <i3dMapping id="exactFillRootNode19" node="0>3|19" />
+    <i3dMapping id="exactFillRootNode20" node="0>3|20" />
+    <i3dMapping id="exactFillRootNode21" node="0>3|21" />
+    <i3dMapping id="exactFillRootNode22" node="0>3|22" />
+    <i3dMapping id="exactFillRootNode23" node="0>3|23" />
+    <i3dMapping id="exactFillRootNode24" node="0>3|24" />
+    <i3dMapping id="exactFillRootNode25" node="0>3|25" />
+    <i3dMapping id="exactFillRootNode26" node="0>3|26" />
+    <i3dMapping id="exactFillRootNode27" node="0>3|27" />
+
+   <i3dMapping id="markerUnloading"   node="0>3|34|0" />
+   <i3dMapping id="markerUnloading1"  node="0>3|34|1" /> 
+   <i3dMapping id="markerUnloading2"  node="0>3|34|2" />  
+   <i3dMapping id="markerUnloading3"  node="0>3|34|3" /> 
+   <i3dMapping id="markerUnloading4"  node="0>3|34|4" /> 
+   <i3dMapping id="markerUnloading5"  node="0>3|34|5" /> 
+   <i3dMapping id="markerUnloading6"  node="0>3|34|6" /> 
+   <i3dMapping id="markerUnloading7"  node="0>3|34|7" />
+   <i3dMapping id="markerUnloading8"  node="0>3|34|8" />
+   <i3dMapping id="markerUnloading9"  node="0>3|34|9" />
+   <i3dMapping id="markerUnloading10" node="0>3|34|10" />
+   <i3dMapping id="markerUnloading11" node="0>3|34|11" />
+   <i3dMapping id="markerUnloading12" node="0>3|34|12" />
+   <i3dMapping id="markerUnloading13" node="0>3|34|13" />
+   <i3dMapping id="markerUnloading14" node="0>3|34|14" />
+   <i3dMapping id="markerUnloading15" node="0>3|34|15" />
+   <i3dMapping id="markerUnloading16" node="0>3|34|16" />
+   <i3dMapping id="markerUnloading17" node="0>3|34|17" />
+   <i3dMapping id="markerUnloading18" node="0>3|34|18" />
+   <i3dMapping id="markerUnloading19" node="0>3|34|19" />
+   <i3dMapping id="markerUnloading20" node="0>3|34|20" />
+   <i3dMapping id="markerUnloading21" node="0>3|34|21" />
+   <i3dMapping id="markerUnloading22" node="0>3|34|22" />
+   <i3dMapping id="markerUnloading23" node="0>3|34|23" />
+   <i3dMapping id="markerUnloading24" node="0>3|34|24" />
+   <i3dMapping id="markerUnloading25" node="0>3|34|25" />
+   <i3dMapping id="markerUnloading26" node="0>3|34|26" />
+
+   <i3dMapping id="viewOLIVEOIL" node="0>17|0" />
+   <i3dMapping id="viewSUNFLOWER_OIL" node="0>17|1" />
+   <i3dMapping id="viewCANOLA_OIL" node="0>17|2" />
+   <i3dMapping id="viewFLOUR" node="0>17|3" />
+   <i3dMapping id="viewSUGAR" node="0>17|4" />
+   <i3dMapping id="viewCEREAL" node="0>17|5" />
+   <i3dMapping id="viewFURNITURE" node="0>17|6" />
+   <i3dMapping id="viewCLOTHES" node="0>17|7" />
+   <i3dMapping id="viewFABRIC" node="0>17|8" />
+   <i3dMapping id="viewBUTTER" node="0>17|9" />
+   <i3dMapping id="viewCHOCOLATE" node="0>17|10" />
+   <i3dMapping id="viewRAISINS" node="0>17|11" />
+   <i3dMapping id="viewSTRAWBERRY" node="0>17|12" />
+   <i3dMapping id="viewLETTUCE" node="0>17|13" />
+   <i3dMapping id="viewTOMATO" node="0>17|14" />
+   <i3dMapping id="viewBREAD" node="0>17|15" />
+   <i3dMapping id="viewEGG" node="0>17|16" />
+   <i3dMapping id="viewCAKE" node="0>17|17" />
+   <i3dMapping id="viewHONEY" node="0>17|18" />
+   <i3dMapping id="viewGRAPEJUICE" node="0>17|19" />
+   <i3dMapping id="viewCHEESE" node="0>17|20" />
+   <i3dMapping id="viewBOARDS" node="0>17|21" />
+   <i3dMapping id="viewWOOL" node="0>17|22" />
+   <i3dMapping id="viewEMPTYPALLET" node="0>17|23" />
+   <i3dMapping id="viewMINERAL_FEED" node="0>17|24" />
+
+   <i3dMapping id="viewSILAGE_ADDITIVE" node="0>17|26" />
+
+  <i3dMapping id="levelArea1Start" node="0>5|0" />
+  <i3dMapping id="levelArea1Width" node="0>5|0|0" />
+  <i3dMapping id="levelArea1Height" node="0>5|0|1" />
+  <i3dMapping id="clearArea1Start" node="0>6|0" />
+  <i3dMapping id="clearArea1Width" node="0>6|0|0" />
+  <i3dMapping id="clearArea1Height" node="0>6|0|1" />
+  <i3dMapping id="indoorArea1Start" node="0>18|0" />
+  <i3dMapping id="indoorArea1Width" node="0>18|0|0" />
+  <i3dMapping id="indoorArea1Height" node="0>18|0|1" />
+  <i3dMapping id="indoorArea2Start" node="0>18|1" />
+  <i3dMapping id="indoorArea2Width" node="0>18|1|0" />
+  <i3dMapping id="indoorArea2Height" node="0>18|1|1" />
+  <i3dMapping id="indoorArea3Start" node="0>18|2" />
+  <i3dMapping id="indoorArea3Width" node="0>18|2|0" />
+  <i3dMapping id="indoorArea3Height" node="0>18|2|1" />
+
+  <i3dMapping id="playerTrigger" node="0>7" />
+  <i3dMapping id="palletMenuTrigger" node="0>7|2" /> 
+  <i3dMapping id="infoTrigger" node="0>7|0" />
+  <i3dMapping id="triggerMarkerPc" node="0>7|1" />
+  <i3dMapping id="palletSpawnerRight1start" node="0>9|1|0"/>
+  <i3dMapping id="palletSpawnerRight2start" node="0>9|1|1"/> 
+  <i3dMapping id="palletSpawnerRight3start" node="0>9|1|2"/> 
+  <i3dMapping id="palletSpawnerRight4start" node="0>9|1|3"/> 
+  <i3dMapping id="palletSpawnerRight5start" node="0>9|1|4"/> 
+  <i3dMapping id="palletSpawnerRight6start" node="0>9|1|5"/> 
+  <i3dMapping id="palletSpawnerRight7start" node="0>9|1|6"/> 
+  <i3dMapping id="palletSpawnerRight1end" node="0>9|1|0|0"/>
+  <i3dMapping id="palletSpawnerRight2end" node="0>9|1|1|0"/> 
+  <i3dMapping id="palletSpawnerRight3end" node="0>9|1|2|0"/> 
+  <i3dMapping id="palletSpawnerRight4end" node="0>9|1|3|0"/> 
+  <i3dMapping id="palletSpawnerRight5end" node="0>9|1|4|0"/> 
+  <i3dMapping id="palletSpawnerRight6end" node="0>9|1|5|0"/> 
+  <i3dMapping id="palletSpawnerRight7end" node="0>9|1|6|0"/>     
+  <i3dMapping id="unloadingStripes" node="0>3|26" />
+  <i3dMapping id="doorTrigger_aussen" node="0>8|5|4" />   
+  <i3dMapping id="palletSpawner" node="0>9" /> 
+  <i3dMapping id="palletStripes" node="0>9|0" />   
+  <i3dMapping id="teleportNode" node="0>11" />
+  <i3dMapping id="lightNode1" node="0>16|5|0" />
+  <i3dMapping id="lightNode2" node="0>16|5|1" />
+  <i3dMapping id="lightNode3" node="0>16|5|2" />
+  <i3dMapping id="lightNode4" node="0>16|5|3" />
+  <i3dMapping id="lightNode5" node="0>16|5|4" />
+  <i3dMapping id="lightNode6" node="0>16|5|5" />
+  <i3dMapping id="lightNode7" node="0>16|5|6" />      
+  <i3dMapping id="realLightsLow" node="0>16|6|0" />
+  <i3dMapping id="realLightsHigh" node="0>16|6|1" /> 
+  <i3dMapping id="rollingDoorSound1" node="0>8|0|7" />   
+  <i3dMapping id="rollingDoorSound2" node="0>8|1|7" />   
+  <i3dMapping id="rollingDoorSound3" node="0>8|2|7" />   
+  <i3dMapping id="rollingDoorSound4" node="0>8|3|7" />   
+  <i3dMapping id="rollingDoorSound5" node="0>8|4|7" />   
+  <i3dMapping id="rollingDoorSound6" node="0>8|5|7" />   
+  <i3dMapping id="rollingDoorSound7" node="0>8|6|7" />   
+  <i3dMapping id="rollingDoorSound8" node="0>8|7|6" />   
+  <i3dMapping id="rollingDoorSound9" node="0>8|8|6" />   
+  <i3dMapping id="rollingDoorSound10" node="0>8|9|7" />   
+  <i3dMapping id="rollingDoorSound11" node="0>8|10|7" />   
+  <i3dMapping id="rollingDoorSound12" node="0>8|11|7" />   
+</i3dMappings>
+</placeable>

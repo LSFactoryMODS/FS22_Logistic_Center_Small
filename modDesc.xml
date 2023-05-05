@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="73">
+
+    <author>Bjoern_aka_FactoryMODS</author>
+
+
+
+             
+    <version>1.6.0.0</version>
+	
+    <title>
+        <en>LogisticWarehouse</en>
+        <de>LogistikZentrum</de>
+    </title>
+	
+    <description>
+        <en>
+<![CDATA[logistics center
+Price: 650000 €
+Maintenance: 150 €
+
+Function: The logistics center is used to store all standard products. The camp is divided into 4 parts.
+Transhipment point: This is where the goods can be accepted and loaded. All gates can be opened and closed with a switch.
+Main warehouse: Most products can be found here, e.g. flour, sugar, fabrics, etc.
+Cold storage: Here you can store products such as Tomatoes, lettuce, chocolate, etc. The cold store has 2 more doors where you can store directly from there.
+Small warehouse: Here you will find storage space for e.g. Empty pallets, wool etc.
+All goods that are stored are also displayed visibly on the shelves from a certain quantity, and all shelves are equipped with displays that show the current level. 
+
+All production and the logistics center are based on the Revamp Mod Script]]>
+        </en>
+        <de>
+<![CDATA[Logistikzentrum
+Preis: 650000 €
+Unterhalt: 150 €
+
+Funktion: Das Logistikzentrum dient zum einlagern aller Standard Produkte . Das Lager ist in 4 Teilen geteilt.
+Umschlagsplatz: Hier können die Waren angenommen und Verladen werden. Alle Tore können per Schalter geöffnet und Geschlossen werden.
+Hauptlager: Hier finden die meisten Produkte platz wie zb. Mehl, Zucker, Stoffe usw.
+Kühllager: Hier kannst du Produkte Lagern wie zb. Tomaten, Salat, Schokolade usw. Das Kühlager hat nochmal 2 Tore wo man dann direkt von da einlagern kann.
+Kleines Lager: Hier findest du Lagerplatz für zb. Leerpaletten, Wolle usw.
+Alle Waren die eingelagert werden werde ab einer bestimmten menge auch sichtbar in den regalen angezeigt, zudem sind alle Regale mit Displays ausgestattet die den aktuellen Füllstand anzeigen. 
+
+Alle Produktion sowie das Logistikzentrum basieren auf da Revamp Mod Script]]>
+        </de>
+    </description>
+    <iconFilename>icon_Logistikzentrum.dds</iconFilename>
+
+
+    <brands>
+        <brand name="FACTORYMODS" title="FactoryMODS" image="Brand_FactoryMODS.dds"/>
+    </brands>
+
+
+    <multiplayer supported="true" />
+
+    <storeItems>
+        <storeItem xmlFilename="Logistikzentrum.xml"/>
+	
+    </storeItems>
+	
+	<extraSourceFiles>
+        <sourceFile filename="scripts/revamp_check.lua" />  
+		<sourceFile filename="scripts/addplaceablecategory.lua" />
+	</extraSourceFiles>
+
+    <fillTypes filename="fillTypes.xml"/>
+
+
+    <dependencies>
+        <dependency>FS22_A_ProductionRevamp</dependency>
+   </dependencies>
+   <revamp minVersion="1.2.0.8">                                     
+   </revamp> 
+	  
+   <l10n filenamePrefix="XML/translation"/> 
+
+
+
+
+	
+</modDesc>
